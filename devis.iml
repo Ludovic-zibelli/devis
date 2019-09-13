@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
+  <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/devis/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/devis/src" isTestSource="false" packagePrefix="App\" />
@@ -39,6 +38,7 @@
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/sensio/framework-extra-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/devis/vendor/symfony/apache-pack" />
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/symfony/asset" />
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/symfony/browser-kit" />
       <excludeFolder url="file://$MODULE_DIR$/devis/vendor/symfony/cache" />

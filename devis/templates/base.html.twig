@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block head %}
+            <meta charset="UTF-8">
+            <title>{% block title %}Estimation devis{% endblock %}</title>
+            <link href="{{ asset('ressources/css/general.css') }}" rel="stylesheet"/>
+        {% endblock %}
     </head>
     <body>
+        {% block header %}{% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block footer %}{% endblock %}
     </body>
+    {% block js %}{% endblock %}
 </html>
