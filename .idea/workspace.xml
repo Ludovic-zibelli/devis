@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/devis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/devis/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/devis/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/devis/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/public/ressources/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/devis/public/ressources/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Form/Type/FormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/devis/src/Form/Type/FormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devis/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/devis/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/devis/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/devis/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/templates/index/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/devis/templates/index/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,10 @@
       <workItem from="1568134411791" duration="1815000" />
       <workItem from="1568144667111" duration="8713000" />
       <workItem from="1568232180527" duration="58000" />
-      <workItem from="1568366765836" duration="11825000" />
+      <workItem from="1568366765836" duration="12466000" />
+      <workItem from="1568651440463" duration="66000" />
+      <workItem from="1568651518875" duration="9314000" />
+      <workItem from="1568709297556" duration="19802000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -223,15 +224,6 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -240,7 +232,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
