@@ -11,7 +11,7 @@
     -webkit-font-smoothing: antialiased;
 }
 .menu_bars::before {
-    font-family: "Font-Awesome-solid";
+    font-family: "Font-Awesome-solid", sans-serif;
     font-weight: 900;
     content: "\f0c9" !important;
     cursor: pointer ;
@@ -19,7 +19,7 @@
     border-radius: 500px;
 }
 .facebook::before {
-    font-family: "Font-Awesome-brands";
+    font-family: "Font-Awesome-brands", sans-serif;
     font-weight: 400;
     font-size: 20px;
     content: "\f39e" !important;
@@ -28,7 +28,7 @@
     border-radius: 100px;
  }
 .twitter::before {
-    font-family: "Font-Awesome-brands";
+    font-family: "Font-Awesome-brands", sans-serif;
     font-weight: 400;
     content: "\f099" !important;
     border: solid 1px #222222;
@@ -36,7 +36,7 @@
     border-radius: 100px;
 }
 .instagram::before {
-    font-family: "Font-Awesome-brands";
+    font-family: "Font-Awesome-brands", sans-serif;
     font-weight: 400;
     content: "\f16d" !important;
     border: solid 1px #222222;
@@ -44,7 +44,7 @@
     border-radius: 100px;
 }
 .linkedin::before {
-    font-family: "Font-Awesome-brands";
+    font-family: "Font-Awesome-brands", sans-serif;
     font-weight: 400;
     content: "\f0e1" !important;
     border: solid 1px #222222;
@@ -52,10 +52,110 @@
     border-radius: 100px;
 }
 .vimeo::before {
-    font-family: "Font-Awesome-brands";
+    font-family: "Font-Awesome-brands", sans-serif;
     font-weight: 400;
     content: "\f27d" !important;
     border: solid 1px #222222;
     padding: 8px 13px;
     border-radius: 100px;
+}
+.et_non_fixed_nav.et_transparent_nav #main-header {
+    position: relative !important;
+}
+@font-face {
+    font-family: 'aslsicons2';
+    src: url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot');
+    src: url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.eot?#iefix') format('embedded-opentype'),
+    url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff2') format('woff2'),
+    url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.woff') format('woff'),
+    url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.ttf') format('truetype'),
+    url('https://www.digitaluser.fr/wp-content/plugins/ajax-search-lite/css/fonts/icons2.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label {
+    font-size: 0 !important;
+    color: rgba(0, 0, 0, 0);
+}
+div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label:after {
+    font-size: 11px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+div[id*='ajaxsearchlite'].wpdreams_asl_container {
+    width: 75%;
+    margin: 0;
+}
+div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {
+    font-weight: bold;
+    color: rgba(217, 49, 43, 1);
+    background-color: rgba(238, 238, 238, 1);
+}
+div[id*='ajaxsearchliteres'].wpdreams_asl_results .results div.asl_image {
+    width: 70px;
+    height: 70px;
+}
+div.asl_r .results {
+    max-height: none;
+}
+.asl_w, .asl_w * {
+    font-family: "Roboto", sans-serif !important;
+}
+.asl_m input[type=search]::placeholder{
+    font-family:"Roboto", sans-serif !important;
+}
+.asl_m input[type=search]::-webkit-input-placeholder{
+    font-family:"Roboto", sans-serif !important;
+}
+.asl_m input[type=search]::-moz-placeholder{
+    font-family:"Roboto", sans-serif !important;
+}
+.asl_m input[type=search]:-ms-input-placeholder{
+    font-family:"Roboto", sans-serif !important;
+}
+.newsletter {
+    width : 150px;
+    padding: 0.3em 1em;
+    color : white;
+    border : none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #fa7268;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7em !important;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.mc4wp-form-basic input[type=email]::placeholder {
+    color: black;
+}
+#mc4wp-form-1:not(input) {
+    width : 100%;
+}
+.mc4wp-form-basic input[type=text], .mc4wp-form-basic input[type=email], .mc4wp-form-basic input[type=tel], .mc4wp-form-basic input[type=url], .mc4wp-form-basic input[type=date], .mc4wp-form-basic select, .mc4wp-form-basic textarea, .mc4wp-form-theme input[type=text], .mc4wp-form-theme input[type=email], .mc4wp-form-theme input[type=tel], .mc4wp-form-theme input[type=url], .mc4wp-form-theme input[type=date], .mc4wp-form-theme select, .mc4wp-form-theme textarea {
+    display : inline-block;
+    min-height : 40px;
+    border-radius : 5px;
+    width : 35%;
+}
+@media screen and (min-width: 769px) and (max-width: 1630px) {
+    .newsletter {
+        width : 125px;
+    }
+    .mc4wp-form-basic input[type=email] {
+        width : 200px;
+    }
+}
+@media screen  and (max-width: 450px) {
+    .newsletter, .mc4wp-form-basic input, .mc4wp-form-basic input[type=email] {
+        width : 100%;
+    }
 }
