@@ -114,5 +114,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="a3d892ac05" level="application" />
     <orderEntry type="library" name="faad4816bd" level="application" />
+    <orderEntry type="library" name="widget" level="application" />
   </component>
 </module>

@@ -2,13 +2,11 @@
 
 namespace App\Form\Type;
 
-use App\Entity\Devis;
+use App\Entity\Estimation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\CountryType;
-use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -17,19 +15,22 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class DevisType extends AbstractType
+class EstimationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('idClient', IntegerType::class)
-            ->add('id', IntegerType::class)
-            ->add('date', DateType::class)
+            ->add('id', IntegerType::class, ['disabled' => true
+            ])
+            ->add('date', DateType::class, ['disabled' => true
+            ])
             ->add('contexte', ChoiceType::class, [
                 'choices'  => [
                     'Création' => 'creation',
                     'Refonte' => 'refonte',
                 ],
+                'label' => 'Contexte du projet',
+                'required' => true,
                 'expanded'  => true,
                 'multiple'  => false,
             ])
@@ -39,6 +40,9 @@ class DevisType extends AbstractType
                     'E-commerce' => 'e-commerce',
                     'Blog' => 'blog',
                 ],
+                'required' => true,
+                'help' => 'Un site vitrine est ..., un site e-commerce est ... et un Blog fait ...',
+                'label' => 'Type de site web',
                 'expanded'  => true,
                 'multiple'  => true,
             ])
@@ -48,6 +52,9 @@ class DevisType extends AbstractType
                     'Zoning' => 'zoning',
                     'Maquette' => 'maquette',
                 ],
+                'required' => true,
+                'help' => 'Le zoning est ... et la maquette ...',
+                'label' => 'Éléments de graphisme fournis par le commanditaire',
                 'expanded'  => true,
                 'multiple'  => false,
             ])
@@ -56,6 +63,8 @@ class DevisType extends AbstractType
                     'Normal' => 'normal',
                     'Sur-mesure' => 'sur-mesure',
                 ],
+                'required' => true,
+                'label' => 'Niveau de graphisme souhaité',
                 'expanded'  => true,
                 'multiple'  => false,
             ])
@@ -68,9 +77,23 @@ class DevisType extends AbstractType
                 'required' => false,
             ])
             ->add('nombrePage', IntegerType::class)
-            ->add('langue', CountryType::class, array('label' => 'Pays', 'preferred_choices' => array('FR')))
+            ->add('langue', ChoiceType::class, [
+                'choices' => [
+                    'Allemand' => 'de',
+                    'Anglais' => 'en',
+                    'Arabe' => 'ar',
+                    'Espagnol'   => 'es',
+                    'Français' => 'fr',
+                    'Italien' => 'it',
+                    'Mandarin' => 'zh',
+                    'Portugais' => 'pt',
+                ],
+                'data' => ['fr'],
+                'expanded' => true,
+                'multiple' => true,
+            ])
             ->add('actualites', CheckboxType::class, [
-                'label'    => 'Partie actualités',
+                'label'    => 'Page actualités',
                 'required' => false,
             ])
             ->add('blog', CheckboxType::class, [
@@ -102,22 +125,23 @@ class DevisType extends AbstractType
                     'Vimeo' => 'vimeo',
                     'Dailymotion' => 'dailymotion',
                 ],
+                'label'    => 'Hébergeur video',
                 'expanded'  => true,
                 'multiple'  => true,
             ])
-            ->add('domaine', RadioType::class, [
-                'label'    => 'Dépôt domaines',
+            ->add('domaine', CheckboxType::class, [
+                'label'    => 'Dépôt du domaines par notre équipe',
                 'required' => false,
             ])
-            ->add('gestion', RadioType::class, [
-                'label'    => 'Gestion hébergement',
+            ->add('gestion', CheckboxType::class, [
+                'label'    => 'Gestion de l\'hébergement par notre équipe',
                 'required' => false,
             ])
-            ->add('suiviStats', RadioType::class, [
+            ->add('suiviStats', CheckboxType::class, [
                 'label'    => 'Rapport mensuel de suivi des stats',
                 'required' => false,
             ])
-            ->add('assistance', RadioType::class, [
+            ->add('assistance', CheckboxType::class, [
                 'label'    => 'Assistance technique mensuelle',
                 'required' => false,
             ])
@@ -133,9 +157,9 @@ class DevisType extends AbstractType
             ])
             ->add('maturiteProjet', ChoiceType::class, [
                 'choices'  => [
-                    'a déjà des devis' => 'a déjà des devis',
-                    'n\’a pas encore de devis' => 'n\’a pas encore de devis',
-                    'par curiosité' => 'par curiosité',
+                    'a déjà des devis' => 'a des devis',
+                    'n\'a pas encore de devis' => 'pas de devis',
+                    'par curiosité' => 'par curiosite',
                 ],
                 'expanded'  => true,
                 'multiple'  => false,
@@ -147,6 +171,7 @@ class DevisType extends AbstractType
                     'Administration' => 'administration',
                     'Entreprise' => 'entreprise',
                 ],
+                'required' => true,
                 'expanded'  => true,
                 'multiple'  => false,
             ])
@@ -159,15 +184,15 @@ class DevisType extends AbstractType
                 'required' => false,
             ])
             ->add('telephone', TelType::class)
-            ->add('calendrier', DateType::class, array('widget' => 'single_text', 'label' => 'Date de Réservation', 'html5' => false, 'attr' => ['class' => 'js-datepicker'], 'format' => 'dd-MM-yy'))
-            ->add('save', SubmitType::class)
+            ->add('calendrier', DateType::class, ['widget' => 'single_text', 'label' => 'Date de Rendez-vous téléphonique', 'html5' => false, 'attr' => ['class' => 'calendrier'] ])
+            ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => devis::class,
+            'data_class' => Estimation::class,
         ]);
     }
 }

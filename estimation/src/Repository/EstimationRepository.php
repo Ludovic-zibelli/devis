@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\EMail;
+use App\Entity\Estimation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method EMail|null find($id, $lockMode = null, $lockVersion = null)
- * @method EMail|null findOneBy(array $criteria, array $orderBy = null)
- * @method EMail[]    findAll()
- * @method EMail[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Estimation|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Estimation|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Estimation[]    findAll()
+ * @method Estimation[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class EMailRepository extends ServiceEntityRepository
+class EstimationRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, EMail::class);
+        parent::__construct($registry, Estimation::class);
     }
 
     // /**
-    //  * @return EMail[] Returns an array of EMail objects
+    //  * @return Estimation[] Returns an array of Estimation objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class EMailRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?EMail
+    public function findOneBySomeField($value): ?Estimation
     {
         return $this->createQueryBuilder('e')
             ->andWhere('e.exampleField = :val')
