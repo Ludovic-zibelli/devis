@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
+    <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="Creation de la structure de la base de données">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devis/.env" beforeDir="false" afterPath="$PROJECT_DIR$/devis/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Entity/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Entity/Devis.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Entity/EMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Entity/Rdv.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Repository/ClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Repository/EMailRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Repository/RdvRepository.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,20 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/devis/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="317">
               <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/devis/src/Entity/Devis.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -246,13 +243,6 @@
               <item name="devis2" type="462c0819:PsiDirectoryNode" />
               <item name="devis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devis2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devis2" type="462c0819:PsiDirectoryNode" />
-              <item name="devis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -315,7 +305,7 @@
       <workItem from="1568651518875" duration="9314000" />
       <workItem from="1568709297556" duration="19802000" />
       <workItem from="1569256992475" duration="2962000" />
-      <workItem from="1569352928430" duration="4059000" />
+      <workItem from="1569352928430" duration="7079000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -345,11 +335,25 @@
       <option name="project" value="LOCAL" />
       <updated>1569269556337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creation de la structure de la base de données">
+      <created>1569357888050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569357888050</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creation de la structure de la base de données">
+      <created>1569358158353</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569358158353</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7021000" />
+    <option name="totallyTimeSpent" value="10041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -363,7 +367,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -372,7 +376,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.60392797" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.60392797" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -424,7 +428,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Demmarage du projet devis en ligne" />
     <MESSAGE value="Mise en place de la connection a la base de donees" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place de la connection a la base de donees" />
+    <MESSAGE value="Creation de la structure de la base de données" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation de la structure de la base de données" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/devis/src/Controller/IndexController.php">
@@ -441,24 +446,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/devis/src/Entity/Devis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/devis/src/Entity/Rdv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1302">
+        <state relative-caret-position="-124">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/devis/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="317">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devis/src/Entity/Devis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
