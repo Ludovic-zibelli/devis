@@ -1,5 +1,83 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 {% block body %}
-    {{ parent() }}
-    {% block formulaire %}{{ form(form) }}{% endblock %}
+
+    <div class="container">
+        <h1>Estimation en ligne</h1>
+        <h2>Contexte de votre projet</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                <label>Votre projet concerne</label>
+                {{ form_widget(form.contexteProjet) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <div class="form-group">
+                    <label>Vous souhaitez</label>
+                    {{ form_widget(form.contexteProjet) }}
+                </div>
+            </div>
+        </div>
+        <h2>Graphisme</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Les éléments de graphisme</label>
+                    <p>Quel(s) élément(s) de graphisme allez-vous fournir ?</p>
+                    {{ form_widget(form.graphisme) }}
+                </div>
+            </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Le niveau de graphisme</label>
+                        <p>Quel niveau de graphisme souhaitez-vous ?</p>
+                        {{ form_widget(form.niveauGraphisme) }}
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Souhaitez-vous créer un logo ?</label>
+                    {{ form_widget(form.creationLogo) }}
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Souhaitez-vous créer une charte graphique ?</label>
+                    {{ form_widget(form.creationChart) }}
+                </div>
+            </div>
+        </div>
+        <h2>Contenue</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Le nombre de pages</label>
+                    <p>Indiquez le nombre de pages que contiendra votre site.</p>
+                    {{ form_widget(form.nombrePage) }}
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Les langues</label>
+                    <p>En quelle(s) langue(s)souhaitez-vous que votre site soit traduit ?</p>
+                    {{ form_widget(form.languesSouhaitees) }}
+                </div>
+            </div>
+        </div>
+        <h2>Fonctionnalités</h2>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label>Quelles seront les fonctionnalités présentes sur votre site ? </label>
+                    {{ form_widget(form.serviceTiers) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_start(form) }}
+
 {% endblock %}
