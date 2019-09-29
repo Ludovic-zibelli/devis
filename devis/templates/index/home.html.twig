@@ -77,7 +77,76 @@
                 </div>
             </div>
         </div>
+            <h2>Domaine & Hébergement</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous déposer un nom de domaine pour votre site ?</label>
+                        {{ form_widget(form.depotDomaine) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous un hébergement pour votre site ?</label>
+                        {{ form_widget(form.gestionHebergement) }}
+                    </div>
+                </div>
+            </div>
+            <h2>Suivi & Référencement</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>Souhaitez-vous une assistance techenique mensuelle ?</label>
+                        {{ form_widget(form.assistanceTechenique) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>De quelle(s) prestations marketing avez-vous besoin ?</label>
+                        {{ form_widget(form.prestationWebmarketing) }}
+                    </div>
+                </div>
+            </div>
+            <h2>Vous & votre projet</h2>
+            <div class="row">
+                <div class="col-12">
+                    <label>Quelle est la maturité de votre projet ?</label>
+                </div>
+                <div class="col-12">
+                    <label>Quelle est votre raison sociale ?</label>
+                    {{ form_widget(form.raison_social) }}
+                </div>
+            </div>
+
+            <h2>Finalisez l'estimation de votre projet</h2>
+            <p>Renseignez vos coordonnées pour que nous puissions vous contacter</p>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Nom</label>
+                        {{ form_widget(form.nom) }}
+                        <label>Prenom</label>
+                        {{ form_widget(form.prenom) }}
+                        <label>Votre adresse e-mail</label>
+                        {{ form_widget(form.email) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Vous souhaitez être contacté par téléphone ?</p>
+                        <p>Renseignez votre numéro </p>
+                        <label>Votre numéro de téléphone</label>
+                        {{ form_widget(form.telephone) }}
+                        <label>Nom de votre societé</label>
+                        {{ form_widget(form.nom_societe) }}
+                    </div>
+                </div>
+            </div>
     </div>
+
     {{ form_start(form) }}
 
 {% endblock %}

@@ -61,7 +61,7 @@
     <meta name="msapplication-TileImage" content="https://www.digitaluser.fr/wp-content/uploads/2019/08/cropped-digital-user-logo-icon-270x270.png">
 
 <body data-rsssl="1" class="et_transparent_nav et_fullwidth_nav et_non_fixed_nav et_show_nav et_cover_background et_pb_gutters2 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_fullscreen">
-{% block body %}
+
     <div id="page-container">
         <div class="et_slide_in_menu_container">
             <span class="mobile_menu_bar et_toggle_fullscreen_menu"><i class="fas fa-times fa-2x"></i></span>
@@ -172,7 +172,8 @@
                 </div>
 			</div>
 		</header>
-
+        {% block body %}
+        {% endblock %}
         <div class="et_pb_section et_pb_section_1 et_section_regular">{% block formulaire %} {% endblock %}</div>
         <Footer>
             {% block footer %}
@@ -266,7 +267,6 @@
                     </div>
                 </div>
             </div>
-            {% endblock %}
         </Footer>
         <span class="et_pb_scroll_top et-pb-icon"><i class="fas fa-chevron-up"></i></span>
         <script type="text/javascript" src="https://opt-out.ferank.eu/tarteaucitron.pro.js?locale=fr&amp;iswordpress=true&amp;domain=digitaluser.fr&amp;uuid=af050170f14cf55679532e1e7e21b1c567035609&amp;ver=5.2.3"></script>
