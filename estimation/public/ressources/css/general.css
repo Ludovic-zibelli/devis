@@ -2,10 +2,6 @@
 {
     content: none !important;
 }
-calendrier {
-    min-width: 320px;
-    height: 630px;
-}
 .icone::before {
     display: inline-block;
     font-style: normal;

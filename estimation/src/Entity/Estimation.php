@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -35,6 +36,11 @@ class Estimation
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $elementsGraphiques;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $niveauGraphisme;
 
     /**
@@ -50,7 +56,7 @@ class Estimation
     /**
      * @ORM\Column(type="integer")
      */
-    private $nbPage;
+    private $nombrePage;
 
     /**
      * @ORM\Column(type="array")
@@ -75,7 +81,7 @@ class Estimation
     /**
      * @ORM\Column(type="integer")
      */
-    private $form;
+    private $formulaire;
 
     /**
      * @ORM\Column(type="boolean")
@@ -188,6 +194,11 @@ class Estimation
     private $raisonSocial;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $optin;
+
+    /**
      * @Assert\Length(
      *      max = 10,
      *      maxMessage = "Le champs est limité à {{ limit }} chiffres"
@@ -209,12 +220,12 @@ class Estimation
         return $this->id;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): ?DateTimeInterface
     {
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setDate(DateTimeInterface $date): self
     {
         $this->date = $date;
 
@@ -241,6 +252,18 @@ class Estimation
     public function setType(array $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getElementsGraphiques(): ?string
+    {
+        return $this->elementsGraphiques;
+    }
+
+    public function setElementsGraphiques(string $elementsGraphiques): self
+    {
+        $this->elementsGraphiques = $elementsGraphiques;
 
         return $this;
     }
@@ -281,14 +304,14 @@ class Estimation
         return $this;
     }
 
-    public function getNbPage(): ?int
+    public function getNombrePage(): ?int
     {
-        return $this->nbPage;
+        return $this->nombrePage;
     }
 
-    public function setNbPage(int $nbPage): self
+    public function setNombrePage(int $nombrePage): self
     {
-        $this->nbPage = $nbPage;
+        $this->nombrePage = $nombrePage;
 
         return $this;
     }
@@ -341,14 +364,14 @@ class Estimation
         return $this;
     }
 
-    public function getForm(): ?int
+    public function getFormulaire(): ?int
     {
-        return $this->form;
+        return $this->formulaire;
     }
 
-    public function setForm(int $form): self
+    public function setFormulaire(int $formulaire): self
     {
-        $this->form = $form;
+        $this->formulaire = $formulaire;
 
         return $this;
     }
@@ -545,6 +568,18 @@ class Estimation
         return $this;
     }
 
+    public function getOptin(): ?bool
+    {
+        return $this->optin;
+    }
+
+    public function setOptin(bool $optin): self
+    {
+        $this->optin = $optin;
+
+        return $this;
+    }
+
     public function getRaisonSocial(): ?string
     {
         return $this->raisonSocial;
@@ -569,12 +604,12 @@ class Estimation
         return $this;
     }
 
-    public function getCalendrier(): ?\DateTimeInterface
+    public function getCalendrier(): ?DateTimeInterface
     {
         return $this->calendrier;
     }
 
-    public function setCalendrier(?\DateTimeInterface $calendrier): self
+    public function setCalendrier(?DateTimeInterface $calendrier): self
     {
         $this->calendrier = $calendrier;
 

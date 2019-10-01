@@ -4,6 +4,7 @@ namespace App\Form\Type;
 
 use App\Entity\Estimation;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -178,13 +179,13 @@ class EstimationType extends AbstractType
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('email', EmailType::class)
-            ->add('raisonSocial', TextType::class)
+            ->add('raisonSocial', TextType::class, ['required' => false])
             ->add('optin', CheckboxType::class, [
                 'label'    => 'newsletter',
                 'required' => false,
             ])
             ->add('telephone', TelType::class)
-            ->add('calendrier', DateType::class, ['widget' => 'single_text', 'label' => 'Date de Rendez-vous téléphonique', 'html5' => false, 'attr' => ['class' => 'calendrier'] ])
+            ->add('calendrier', DateTimeType::class, ['label' => 'Prise de RDV', 'widget' => 'single_text'])
             ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }
