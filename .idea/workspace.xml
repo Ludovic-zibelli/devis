@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/estimation/templates/index/verification.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/verification.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,6 +244,10 @@
       <workItem from="1569793700764" duration="2728000" />
       <workItem from="1569838031549" duration="14015000" />
       <workItem from="1569925340558" duration="294000" />
+      <workItem from="1569950851311" duration="8926000" />
+      <workItem from="1570010120315" duration="1480000" />
+      <workItem from="1570028738481" duration="8396000" />
+      <workItem from="1570081376970" duration="9743000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>

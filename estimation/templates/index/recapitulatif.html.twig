@@ -1,0 +1,67 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    {{ parent() }}
+    {% block inner %}
+        <ul>
+            <li>{{ estimation.contexte }}</li>
+            {% set t = estimation.type|length  %}
+            {% if t != 0 %}
+                {% for i in 1..t %}
+                    {{ cycle(estimation.type, i) }}
+                {% endfor %}
+            {% endif %}
+            <li>{{ estimation.elementsGraphiques}}</li>
+            <li>{{ estimation.niveauGraphisme }}</li>
+            <li>{{ estimation.logo }}</li>
+            <li>{{ estimation.charteGraphique }}</li>
+            <li>{{ estimation.nombrePage }}</li>
+            {% set l = estimation.langue|length  %}
+            {% if l != 0 %}
+                {% for i in 1..l %}
+                    {{ cycle(estimation.langue, i) }}
+                {% endfor %}
+            {% endif %}
+            <li>{{ estimation.actualites }}</li>
+            <li>{{ estimation.blog }}</li>
+            <li>{{ estimation.emailing }}</li>
+            <li>{{ estimation.formulaire }}</li>
+            <li>{{ estimation.espaceMembre }}</li>
+            <li>{{ estimation.forum }}</li>
+            <li>{{ estimation.gMaps }}</li>
+            <li>{{ estimation.image }}</li>
+            <li>{{ estimation.video }}</li>
+            {% set hv = estimation.hebergeurVideo|length  %}
+            {% if hv != 0 %}
+                {% for i in 1..hv %}
+                    {{ cycle(estimation.hebergeurVideo, i) }}
+                {% endfor %}
+            {% endif %}
+            <li>{{ estimation.domaine }}</li>
+            <li>{{ estimation.gestion }}</li>
+            <li>{{ estimation.suiviStats }}</li>
+            <li>{{ estimation.assistance }}</li>
+            {% set md = estimation.marketingDigital|length  %}
+            {% if md != 0 %}
+                {% for i in 1..md %}
+                    {{ cycle(estimation.marketingDigital, i) }}
+                {% endfor %}
+            {% endif %}
+            <li>{{ estimation.maturiteProjet }}</li>
+            <li>{{ estimation.client }}</li>
+            <li>{{ estimation.nom }}</li>
+            <li>{{ estimation.prenom }}</li>
+            <li>{{ estimation.email }}</li>
+            <li>{{ estimation.raisonSocial }}</li>
+            <li>{{ estimation.optin }}</li>
+            <li>{{ estimation.telephone }}</li>
+        </ul>
+
+        <form method="post">
+            <label>En cliquant, j'accepte de donné mes M&M's </label>
+            <input type="checkbox" id="estimation_rgpd" name="estimation[rgpd]" required>
+            <button type="submit" id="estimation_save" name="estimation[save]">Valider</button>
+        </form>
+
+        <a href="{{ path('estimation', { 'id' : clientId }) }}">Modifier le formulaire</a>
+    {% endblock %}
+{% endblock %}

@@ -13,13 +13,8 @@ class Estimation
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="guid")
+     * @ORM\GeneratedValue(strategy="UUID")
      */
     private $clientId;
 
@@ -204,27 +199,20 @@ class Estimation
     private $telephone;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="boolean")
      */
-    private $calendrier;
+    private $rgpd;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $valide;
 
     /** GETTTER & SETTER **/
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getClientId(): ?int
+    public function getClientId(): ?string
     {
         return $this->clientId;
-    }
-
-    public function setClientId(int $clientId): self
-    {
-        $this->clientId = $clientId;
-
-        return $this;
     }
 
     public function getDate(): ?DateTimeInterface
@@ -604,21 +592,33 @@ class Estimation
         return $this->telephone;
     }
 
-    public function setTelephone(?string $telephone): self
+    public function setTelephone(?bool $telephone): self
     {
         $this->telephone = $telephone;
 
         return $this;
     }
 
-    public function getCalendrier(): ?DateTimeInterface
+    public function getRgpd(): ?bool
     {
-        return $this->calendrier;
+        return $this->rgpd;
     }
 
-    public function setCalendrier(?DateTimeInterface $calendrier): self
+    public function setRgpd(bool $rgpd): self
     {
-        $this->calendrier = $calendrier;
+        $this->rgpd = $rgpd;
+
+        return $this;
+    }
+
+    public function getValide(): ?bool
+    {
+        return $this->valide;
+    }
+
+    public function setValide(bool $valide): self
+    {
+        $this->valide = $valide;
 
         return $this;
     }

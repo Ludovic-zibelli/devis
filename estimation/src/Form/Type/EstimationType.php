@@ -4,7 +4,6 @@ namespace App\Form\Type;
 
 use App\Entity\Estimation;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -21,9 +20,7 @@ class EstimationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('id', IntegerType::class, ['disabled' => true
-            ])
-            ->add('clientId', IntegerType::class, ['disabled' => true
+            ->add('clientId', TextType::class, ['disabled' => true
             ])
             ->add('date', DateType::class, ['disabled' => true
             ])
@@ -34,8 +31,6 @@ class EstimationType extends AbstractType
                 ],
                 'label' => 'Contexte du projet',
                 'required' => true,
-                'expanded'  => true,
-                'multiple'  => false,
             ])
             ->add('type', ChoiceType::class, [
                 'choices'  => [
@@ -58,8 +53,6 @@ class EstimationType extends AbstractType
                 'required' => true,
                 'help' => 'Le zoning est ... et la maquette ...',
                 'label' => 'Éléments de graphisme fournis par le commanditaire',
-                'expanded'  => true,
-                'multiple'  => false,
             ])
             ->add('niveauGraphisme', ChoiceType::class, [
                 'choices'  => [
@@ -68,8 +61,6 @@ class EstimationType extends AbstractType
                 ],
                 'required' => true,
                 'label' => 'Niveau de graphisme souhaité',
-                'expanded'  => true,
-                'multiple'  => false,
             ])
             ->add('logo', CheckboxType::class, [
                 'label'    => 'Création de logo',
@@ -79,7 +70,13 @@ class EstimationType extends AbstractType
                 'label'    => 'Création de charte graphique',
                 'required' => false,
             ])
-            ->add('nombrePage', IntegerType::class)
+            ->add('nombrePage', IntegerType::class, ['attr' => [
+                'min' => 1,
+                'max' => 100
+             ],
+                'data' => 1
+            ])
+
             ->add('langue', ChoiceType::class, [
                 'choices' => [
                     'Allemand' => 'de',
@@ -107,7 +104,12 @@ class EstimationType extends AbstractType
                 'label'    => 'Logiciel emailing',
                 'required' => false,
             ])
-            ->add('formulaire', IntegerType::class)
+            ->add('formulaire', IntegerType::class, ['attr' => [
+                'min' => 0,
+                'max' => 20
+            ],
+                'data' => 0
+            ])
             ->add('espaceMembre', CheckboxType::class, [
                 'label'    => 'Espace membre',
                 'required' => false,
@@ -120,8 +122,18 @@ class EstimationType extends AbstractType
                 'label'    => 'Intégration Carte dynamique',
                 'required' => false,
             ])
-            ->add('image', IntegerType::class)
-            ->add('video', IntegerType::class)
+            ->add('image', IntegerType::class, ['attr' => [
+                'min' => 0,
+                'max' => 1000
+            ],
+                'data' => 0
+            ])
+            ->add('video', IntegerType::class, ['attr' => [
+                'min' => 0,
+                'max' => 50
+            ],
+                'data' => 0
+            ])
             ->add('hebergeurVideo', ChoiceType::class, [
                 'choices'  => [
                     'Youtube' => 'youtube',
@@ -164,8 +176,6 @@ class EstimationType extends AbstractType
                     'n\'a pas encore de devis' => 'pas de devis',
                     'par curiosité' => 'par curiosite',
                 ],
-                'expanded'  => true,
-                'multiple'  => false,
             ])
             ->add('client', ChoiceType::class, [
                 'choices'  => [
@@ -175,8 +185,6 @@ class EstimationType extends AbstractType
                     'Entreprise' => 'entreprise',
                 ],
                 'required' => true,
-                'expanded'  => true,
-                'multiple'  => false,
             ])
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
@@ -187,7 +195,9 @@ class EstimationType extends AbstractType
                 'required' => false,
             ])
             ->add('telephone', TelType::class)
-            ->add('calendrier', DateTimeType::class, ['label' => 'Prise de RDV', 'widget' => 'single_text', 'required' => false])
+            ->add('rgpd', CheckboxType::class)
+            ->add('valide', CheckboxType::class, ['disabled' => true,
+            ])
             ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }
