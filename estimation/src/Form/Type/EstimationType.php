@@ -23,6 +23,8 @@ class EstimationType extends AbstractType
         $builder
             ->add('id', IntegerType::class, ['disabled' => true
             ])
+            ->add('clientId', IntegerType::class, ['disabled' => true
+            ])
             ->add('date', DateType::class, ['disabled' => true
             ])
             ->add('contexte', ChoiceType::class, [
@@ -185,7 +187,7 @@ class EstimationType extends AbstractType
                 'required' => false,
             ])
             ->add('telephone', TelType::class)
-            ->add('calendrier', DateTimeType::class, ['label' => 'Prise de RDV', 'widget' => 'single_text'])
+            ->add('calendrier', DateTimeType::class, ['label' => 'Prise de RDV', 'widget' => 'single_text', 'required' => false])
             ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }

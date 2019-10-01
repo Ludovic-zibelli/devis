@@ -3,6 +3,7 @@
     {{ parent() }}
     {% block formulaire %}
         {% do form.id.setRendered() %}
+        {% do form.clientId.setRendered() %}
         {% do form.date.setRendered() %}
         {{ form(form) }}
     {% endblock %}

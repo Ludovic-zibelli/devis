@@ -13,10 +13,15 @@ class Estimation
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $clientId;
 
     /**
      * @ORM\Column(type="date")
@@ -149,11 +154,6 @@ class Estimation
     private $client;
 
     /**
-     * @Assert\Type(
-     *     type="alpha",
-     *     message="Ceci '{{ value }}' n'est pas un {{ type }}."
-     * )
-     *
      * @Assert\Length(
      *      max = 50,
      *      maxMessage = "Le champs est limité à {{ limit }} charactères"
@@ -164,11 +164,6 @@ class Estimation
     private $nom;
 
     /**
-     * @Assert\Type(
-     *     type="alpha",
-     *     message="Ceci '{{ value }}' n'est pas un {{ type }}."
-     * )
-     *
      * @Assert\Length(
      *      max = 50,
      *      maxMessage = "Le champs est limité à {{ limit }} charactères"
@@ -218,6 +213,18 @@ class Estimation
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getClientId(): ?int
+    {
+        return $this->clientId;
+    }
+
+    public function setClientId(int $clientId): self
+    {
+        $this->clientId = $clientId;
+
+        return $this;
     }
 
     public function getDate(): ?DateTimeInterface

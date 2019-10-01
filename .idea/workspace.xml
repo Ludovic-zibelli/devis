@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/estimation/templates/index/crm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/estimation/templates/index/verification.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/public/ressources/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/public/ressources/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
