@@ -15,7 +15,7 @@
     <meta name="twitter:site" content="@DigitalUserFR">
     <meta name="twitter:image" content="https://www.digitaluser.fr/wp-content/uploads/2019/07/DU.png">
     <meta name="twitter:creator" content="@DigitalUserFR">
-    <script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.digitaluser.fr/#organization","name":"Agence web Digital User","url":"https://www.digitaluser.fr/","sameAs":["https://www.facebook.com/agencedigitaluser/","http://linkedin.com/company/digital-user","http://linkedin.com/company/digital-user","https://twitter.com/DigitalUserFR"],"logo":{"@type":"ImageObject","@id":"https://www.digitaluser.fr/#logo","url":false,"caption":"Agence web Digital User"},"image":{"@id":"https://www.digitaluser.fr/#logo"}},{"@type":"WebSite","@id":"https://www.digitaluser.fr/#website","url":"https://www.digitaluser.fr/","name":"DigitalUser","publisher":{"@id":"https://www.digitaluser.fr/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.digitaluser.fr/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.digitaluser.fr/devis-en-ligne/#webpage","url":"https://www.digitaluser.fr/devis-en-ligne/","inLanguage":"fr-FR","name":Estimation,"isPartOf":{"@id":"https://www.digitaluser.fr/#website"},"datePublished":"2019-08-24T19:12:07+00:00","dateModified":"2019-09-17T14:20:04+00:00","breadcrumb":{"@id":"https://www.digitaluser.fr/devis-en-ligne/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.digitaluser.fr/devis-en-ligne/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.digitaluser.fr/","url":"https://www.digitaluser.fr/","name":"Accueil"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.digitaluser.fr/devis-en-ligne/","url":"https://www.digitaluser.fr/devis-en-ligne/","name":Estimation}}]}]}</script>
+    <script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.digitaluser.fr/#organization","name":"Agence web Digital User","url":"https://www.digitaluser.fr/","sameAs":["https://www.facebook.com/agencedigitaluser/","http://linkedin.com/company/digital-user","http://linkedin.com/company/digital-user","https://twitter.com/DigitalUserFR"],"logo":{"@type":"ImageObject","@id":"https://www.digitaluser.fr/#logo","url":false,"caption":"Agence web Digital User"},"image":{"@id":"https://www.digitaluser.fr/#logo"}},{"@type":"WebSite","@id":"https://www.digitaluser.fr/#website","url":"https://www.digitaluser.fr/","name":"DigitalUser","publisher":{"@id":"https://www.digitaluser.fr/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.digitaluser.fr/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.digitaluser.fr/devis-en-ligne/#webpage","url":"https://www.digitaluser.fr/devis-en-ligne/","inLanguage":"fr-FR","name":"Estimation","isPartOf":{"@id":"https://www.digitaluser.fr/#website"},"datePublished":"2019-08-24T19:12:07+00:00","dateModified":"2019-09-17T14:20:04+00:00","breadcrumb":{"@id":"https://www.digitaluser.fr/devis-en-ligne/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.digitaluser.fr/devis-en-ligne/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.digitaluser.fr/","url":"https://www.digitaluser.fr/","name":"Accueil"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.digitaluser.fr/devis-en-ligne/","url":"https://www.digitaluser.fr/devis-en-ligne/","name":"Estimation"}}]}]}</script>
     <link rel="dns-prefetch" href="//www.digitaluser.fr">
     <link rel="dns-prefetch" href="//opt-out.ferank.eu">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -171,10 +171,8 @@
                 </div>
 			</div>
 		</header>
-
-        <div class="et_pb_section et_pb_section_1 et_section_regular">{% block inner %} {% endblock %}</div>
+        {% endblock %}
         <Footer>
-            {% block footer %}
             <div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
 					<div class="et_pb_row et_pb_row_2">
 				        <div class="et_pb_column et_pb_column_4_4 et_pb_column_7 et_pb_css_mix_blend_mode_passthrough et-last-child">
@@ -265,8 +263,8 @@
                     </div>
                 </div>
             </div>
-            {% endblock %}
         </Footer>
+
         <span class="et_pb_scroll_top et-pb-icon"><i class="fas fa-chevron-up"></i></span>
         <script type="text/javascript" src="https://opt-out.ferank.eu/tarteaucitron.pro.js?locale=fr&amp;iswordpress=true&amp;domain=digitaluser.fr&amp;uuid=af050170f14cf55679532e1e7e21b1c567035609&amp;ver=5.2.3"></script>
         <script type="text/javascript" src="https://www.digitaluser.fr/wp-content/themes/Divi/includes/builder/scripts/jquery.mobile.custom.min.js?ver=3.24"></script>
@@ -459,8 +457,5 @@
             </div>
         </div>
     </div>
-    {% block javascript %}{% endblock %}
-{% endblock %}
-
 </body>
 </html>
