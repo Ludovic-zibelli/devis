@@ -7,16 +7,14 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                <label>Votre projet concerne</label>
+                <p>Votre projet concerne</p>
                 {{ form_widget(form.contexteProjet) }}
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
+            <div class="col-6">
                 <div class="form-group">
-                    <label>Vous souhaitez</label>
-                    {{ form_widget(form.contexteProjet) }}
+                    <p>Vous souhaitez</p>
+                    {{ form_widget(form.objectifSite) }}
                 </div>
             </div>
         </div>
@@ -72,7 +70,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="form-group">
-                    <label>Quelles seront les fonctionnalités présentes sur votre site ? </label>
+                    <p>Quelles seront les fonctionnalités présentes sur votre site ? </p>
                     {{ form_widget(form.serviceTiers) }}
                 </div>
             </div>
