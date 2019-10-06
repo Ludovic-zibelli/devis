@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-
+    {{ form_start(form) }}
     <div class="container">
         <h1>Estimation en ligne</h1>
         <h2>Contexte de votre projet</h2>
@@ -111,6 +111,7 @@
             <div class="row">
                 <div class="col-12">
                     <label>Quelle est la maturité de votre projet ?</label>
+                    {{ form_widget(form.maturation) }}
                 </div>
                 <div class="col-12">
                     <label>Quelle est votre raison sociale ?</label>
@@ -143,8 +144,11 @@
                     </div>
                 </div>
             </div>
+        <div class="col-12">
+            {{ form_widget(form.valider, {'label' : 'Valider'}) }}
+        </div>
     </div>
 
-    {{ form_start(form) }}
+
 
 {% endblock %}
