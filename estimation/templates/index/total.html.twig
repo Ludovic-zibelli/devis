@@ -1,7 +1,92 @@
 {% extends "base.html.twig" %}
 {% block body %}
     {{ parent() }}
-    {% block inner %}
-
-    {% endblock %}
+    Estimation : {{ total }}€
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;">Prendre RDV avec un conseiller</a>
+    <ul>
+        <li>Votre demande concerne la {{ estimation.contexte }} d'un site web</li>
+        <li>Vous voulez un site web de type : {{ estimation.type }}</li>
+        <li>{% if estimation.elementsGraphiques == 'aucun' %}
+                Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique
+            {% else %}
+                Vous disposez d'un {{ estimation.elementsGraphiques}}
+            {% endif %}</li>
+        <li>Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</li>
+        <li>{% if estimation.logo != false %}
+                Vous souhaitez que nous créions votre logo
+            {% endif %}</li>
+        <li>{% if estimation.charteGraphique != false %}
+                Vous souhaitez que nous créions votre charte graphique
+            {% endif %}</li>
+        <li>Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
+        {% set l = estimation.langue|length %}
+        <li>{% if l != 0 %}
+                {% for i in 1..l %}
+                    {% set cycle = cycle(estimation.langue, i) %}
+                    Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}
+                {% endfor %}
+            {% endif %}</li>
+        <li>{% if estimation.actualites != false %}
+                Vous voulez avoir une page consacrée à l'actualités
+            {% endif %}</li>
+        <li>{% if estimation.blog != false %}
+                Vous voulez ajouter un blog au site web
+            {% endif %}</li>
+        <li>{% if estimation.emailing != false %}
+                Vous souhaitez une solution d'emailing
+            {% endif %}</li>
+        <li>{% if estimation.formulaire == 0 %}
+                Vous ne souhaitez pas de formulaire
+            {% else %}
+                Vous souhaitez {{ estimation.formulaire}} formulaire(s)
+            {% endif %}</li>
+        <li>{% if estimation.espaceMembre != false %}
+                Vous souhaitez un espace membre
+            {% endif %}</li>
+        <li>{% if estimation.forum != false %}
+                Vous souhaitez un forum
+            {% endif %}</li>
+        <li>{% if estimation.gMaps  != false %}
+                Vous souhaitez intégrer Google Maps
+            {% endif %}</li>
+        <li>{% if estimation.image == 0 %}
+                Vous ne souhaitez pas insérer d'image
+            {% else %}
+                Vous souhaitez insérer {{ estimation.image}} image(s)
+            {% endif %}</li>
+        <li>{% if estimation.video == 0 %}
+                Vous ne souhaitez pas insérer de vidéo
+            {% else %}
+                Vous souhaitez insérer {{ estimation.video}} vidéo(s)
+            {% endif %}</li>
+        {% set hv = estimation.hebergeurVideo|length %}
+        <li>{% if hv != 0 %}
+                vous hébergez vos videos chez
+                {% for i in 1..hv %}
+                    {{ cycle(estimation.hebergeurVideo, i) }}
+                {% endfor %}
+            {% endif %}</li>
+        <li>{% if estimation.domaine  != false %}
+                Vous souhaitez nous confier l'achat du nom de domaine
+            {% endif %}</li>
+        <li>{% if estimation.gestion != false %}
+                Vous souhaitez nous confier la gestion
+            {% endif %}</li>
+        <li>{% if estimation.suiviStats != false %}
+                Vous souhaitez recevoir tout les mois un suivi des stats de votre site web
+            {% endif %}</li>
+        <li>{% if estimation.assistance  != false %}
+                Vous souhaitez une assistance technique
+            {% endif %}</li>
+        {% set md = estimation.marketingDigital|length %}
+        <li>{% if md != 0 %}
+                Vous voudriez
+                {% for i in 1..md %}
+                    {% set cycle = cycle(estimation.marketingDigital, i) %}
+                    {{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}
+                {% endfor %}
+            {% endif %}</li>
+    </ul>
 {% endblock %}

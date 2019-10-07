@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,6 +242,12 @@
       <workItem from="1570010120315" duration="1480000" />
       <workItem from="1570028738481" duration="8396000" />
       <workItem from="1570081376970" duration="11507000" />
+      <workItem from="1570198441294" duration="11823000" />
+      <workItem from="1570283627886" duration="5849000" />
+      <workItem from="1570309255588" duration="14915000" />
+      <workItem from="1570374335046" duration="8410000" />
+      <workItem from="1570406297073" duration="331000" />
+      <workItem from="1570447476918" duration="3213000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>

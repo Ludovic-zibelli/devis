@@ -30,7 +30,6 @@ class EstimationType extends AbstractType
                     'Refonte' => 'refonte',
                 ],
                 'label' => 'Contexte du projet',
-                'required' => true,
             ])
             ->add('type', ChoiceType::class, [
                 'choices'  => [
@@ -40,17 +39,14 @@ class EstimationType extends AbstractType
                 ],
                 'required' => true,
                 'help' => 'Un site vitrine est ..., un site e-commerce est ... et un Blog fait ...',
-                'label' => 'Type de site web',
-                'expanded'  => true,
-                'multiple'  => true,
+                'label' => 'Type de site web désiré',
             ])
             ->add('elementsGraphiques', ChoiceType::class, [
                 'choices'  => [
                     'Aucun' => 'aucun',
                     'Zoning' => 'zoning',
-                    'Maquette' => 'maquette',
+                    'Mock-up' => 'mock-up',
                 ],
-                'required' => true,
                 'help' => 'Le zoning est ... et la maquette ...',
                 'label' => 'Éléments de graphisme fournis par le commanditaire',
             ])
@@ -59,7 +55,6 @@ class EstimationType extends AbstractType
                     'Normal' => 'normal',
                     'Sur-mesure' => 'sur-mesure',
                 ],
-                'required' => true,
                 'label' => 'Niveau de graphisme souhaité',
             ])
             ->add('logo', CheckboxType::class, [
@@ -70,11 +65,11 @@ class EstimationType extends AbstractType
                 'label'    => 'Création de charte graphique',
                 'required' => false,
             ])
-            ->add('nombrePage', IntegerType::class, ['attr' => [
+            ->add('nombrePage', IntegerType::class, [
+                'attr' => [
                 'min' => 1,
                 'max' => 100
-             ],
-                'data' => 1
+             ]
             ])
 
             ->add('langue', ChoiceType::class, [
@@ -88,7 +83,6 @@ class EstimationType extends AbstractType
                     'Mandarin' => 'zh',
                     'Portugais' => 'pt',
                 ],
-                'data' => ['fr'],
                 'expanded' => true,
                 'multiple' => true,
             ])
@@ -104,11 +98,11 @@ class EstimationType extends AbstractType
                 'label'    => 'Logiciel emailing',
                 'required' => false,
             ])
-            ->add('formulaire', IntegerType::class, ['attr' => [
+            ->add('formulaire', IntegerType::class, [
+                'attr' => [
                 'min' => 0,
                 'max' => 20
-            ],
-                'data' => 0
+            ]
             ])
             ->add('espaceMembre', CheckboxType::class, [
                 'label'    => 'Espace membre',
@@ -122,17 +116,17 @@ class EstimationType extends AbstractType
                 'label'    => 'Intégration Carte dynamique',
                 'required' => false,
             ])
-            ->add('image', IntegerType::class, ['attr' => [
+            ->add('image', IntegerType::class, [
+                'attr' => [
                 'min' => 0,
                 'max' => 1000
-            ],
-                'data' => 0
+            ]
             ])
-            ->add('video', IntegerType::class, ['attr' => [
+            ->add('video', IntegerType::class, [
+                'attr' => [
                 'min' => 0,
                 'max' => 50
-            ],
-                'data' => 0
+            ]
             ])
             ->add('hebergeurVideo', ChoiceType::class, [
                 'choices'  => [
@@ -143,6 +137,7 @@ class EstimationType extends AbstractType
                 'label'    => 'Hébergeur video',
                 'expanded'  => true,
                 'multiple'  => true,
+                'required' => false,
             ])
             ->add('domaine', CheckboxType::class, [
                 'label'    => 'Dépôt du domaines par notre équipe',
@@ -162,19 +157,20 @@ class EstimationType extends AbstractType
             ])
             ->add('marketingDigital', ChoiceType::class, [
                 'choices'  => [
-                    'Accompagnement réseaux sociaux' => 'youtube',
-                    'Référencement naturel' => 'vimeo',
-                    'Accompagnement rédaction web' => 'dailymotion',
-                    'Campagnes de marketing en ligne' => 'dailymotion',
+                    'Accompagnement réseaux sociaux' => 'res_soc',
+                    'Référencement naturel' => 'ref_nat',
+                    'Accompagnement rédaction web' => 'redac',
+                    'Campagnes de marketing en ligne' => 'campagne',
                 ],
                 'expanded'  => true,
                 'multiple'  => true,
+                'required' => false
             ])
             ->add('maturiteProjet', ChoiceType::class, [
                 'choices'  => [
-                    'a déjà des devis' => 'a des devis',
-                    'n\'a pas encore de devis' => 'pas de devis',
-                    'par curiosité' => 'par curiosite',
+                    'a déjà des devis' => 'devis',
+                    'n\'a pas encore de devis' => 'pas',
+                    'par curiosité' => 'curiosite',
                 ],
             ])
             ->add('client', ChoiceType::class, [
@@ -183,9 +179,7 @@ class EstimationType extends AbstractType
                     'Association' => 'association',
                     'Administration' => 'administration',
                     'Entreprise' => 'entreprise',
-                ],
-                'required' => true,
-            ])
+                ]])
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('email', EmailType::class)
@@ -194,10 +188,9 @@ class EstimationType extends AbstractType
                 'label'    => 'newsletter',
                 'required' => false,
             ])
-            ->add('telephone', TelType::class)
+            ->add('telephone', TelType::class, ['required' => false])
             ->add('rgpd', CheckboxType::class)
-            ->add('valide', CheckboxType::class, ['disabled' => true,
-            ])
+            ->add('valide', CheckboxType::class)
             ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }

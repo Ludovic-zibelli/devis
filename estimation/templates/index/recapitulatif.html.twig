@@ -1,65 +1,108 @@
-{% set t = estimation.type|length %}
-{% set l = estimation.langue|length %}
-{% set hv = estimation.hebergeurVideo|length %}
-{% set md = estimation.marketingDigital|length %}
 {% extends "base.html.twig" %}
 {% block body %}
     {{ parent() }}
-    {% block inner %}
         <ul>
-            <li>{{ estimation.contexte }}</li>
-            {% if t != 0 %}
-                {% for i in 1..t %}
-                    {{ cycle(estimation.type, i) }}
-                {% endfor %}
-            {% endif %}
-            <li>{{ estimation.elementsGraphiques}}</li>
-            <li>{{ estimation.niveauGraphisme }}</li>
-            <li>{{ estimation.logo }}</li>
-            <li>{{ estimation.charteGraphique }}</li>
-            <li>{{ estimation.nombrePage }}</li>
-            {% if l != 0 %}
+            <li>Votre demande concerne la {{ estimation.contexte }} d'un site web</li>
+            <li>Vous voulez un site web de type : {{ estimation.type }}</li>
+            <li>{% if estimation.elementsGraphiques == 'aucun' %}
+                Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique
+                    {% else %}
+                        Vous disposez d'un {{ estimation.elementsGraphiques}}
+                {% endif %}</li>
+            <li>Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</li>
+            <li>{% if estimation.logo != false %}
+                    Vous souhaitez que nous créions votre logo
+                {% endif %}</li>
+            <li>{% if estimation.charteGraphique != false %}
+                    Vous souhaitez que nous créions votre charte graphique
+                {% endif %}</li>
+            <li>Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
+            {% set l = estimation.langue|length %}
+            <li>{% if l != 0 %}
                 {% for i in 1..l %}
-                    {{ cycle(estimation.langue, i) }}
+                    {% set cycle = cycle(estimation.langue, i) %}
+                    Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}
                 {% endfor %}
-            {% endif %}
-            <li>{{ estimation.actualites }}</li>
-            <li>{{ estimation.blog }}</li>
-            <li>{{ estimation.emailing }}</li>
-            <li>{{ estimation.formulaire }}</li>
-            <li>{{ estimation.espaceMembre }}</li>
-            <li>{{ estimation.forum }}</li>
-            <li>{{ estimation.gMaps }}</li>
-            <li>{{ estimation.image }}</li>
-            <li>{{ estimation.video }}</li>
-            {% if hv != 0 %}
+            {% endif %}</li>
+            <li>{% if estimation.actualites != false %}
+                    Vous voulez avoir une page consacrée à l'actualités
+                {% endif %}</li>
+            <li>{% if estimation.blog != false %}
+                    Vous voulez ajouter un blog au site web
+                {% endif %}</li>
+            <li>{% if estimation.emailing != false %}
+                    Vous souhaitez une solution d'emailing
+                {% endif %}</li>
+            <li>{% if estimation.formulaire == 0 %}
+                    Vous ne souhaitez pas de formulaire
+                {% else %}
+                    Vous souhaitez {{ estimation.formulaire}} formulaire(s)
+                {% endif %}</li>
+            <li>{% if estimation.espaceMembre != false %}
+                    Vous souhaitez un espace membre
+                {% endif %}</li>
+            <li>{% if estimation.forum != false %}
+                    Vous souhaitez un forum
+                {% endif %}</li>
+            <li>{% if estimation.gMaps  != false %}
+                    Vous souhaitez intégrer Google Maps
+                {% endif %}</li>
+            <li>{% if estimation.image == 0 %}
+                    Vous ne souhaitez pas insérer d'image
+                {% else %}
+                    Vous souhaitez insérer {{ estimation.image}} image(s)
+                {% endif %}</li>
+            <li>{% if estimation.video == 0 %}
+                    Vous ne souhaitez pas insérer de vidéo
+                {% else %}
+                    Vous souhaitez insérer {{ estimation.video}} vidéo(s)
+                {% endif %}</li>
+            {% set hv = estimation.hebergeurVideo|length %}
+            <li>{% if hv != 0 %}
+                vous hébergez vos videos chez
                 {% for i in 1..hv %}
                     {{ cycle(estimation.hebergeurVideo, i) }}
                 {% endfor %}
-            {% endif %}
-            <li>{{ estimation.domaine }}</li>
-            <li>{{ estimation.gestion }}</li>
-            <li>{{ estimation.suiviStats }}</li>
-            <li>{{ estimation.assistance }}</li>
-            {% if md != 0 %}
+            {% endif %}</li>
+            <li>{% if estimation.domaine  != false %}
+                    Vous souhaitez nous confier l'achat du nom de domaine
+                {% endif %}</li>
+            <li>{% if estimation.gestion != false %}
+                    Vous souhaitez nous confier la gestion
+                {% endif %}</li>
+            <li>{% if estimation.suiviStats != false %}
+                    Vous souhaitez recevoir tout les mois un suivi des stats de votre site web
+                {% endif %}</li>
+            <li>{% if estimation.assistance  != false %}
+                    Vous souhaitez une assistance technique
+                {% endif %}</li>
+            {% set md = estimation.marketingDigital|length %}
+            <li>{% if md != 0 %}
+                    Vous voudriez
                 {% for i in 1..md %}
-                    {{ cycle(estimation.marketingDigital, i) }}
+                    {% set cycle = cycle(estimation.marketingDigital, i) %}
+                    {{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}
                 {% endfor %}
-            {% endif %}
-            <li>{{ estimation.maturiteProjet }}</li>
-            <li>{{ estimation.client }}</li>
-            <li>{{ estimation.nom }}</li>
-            <li>{{ estimation.prenom }}</li>
-            <li>{{ estimation.email }}</li>
-            <li>{{ estimation.raisonSocial }}</li>
-            <li>{{ estimation.optin }}</li>
-            <li>{{ estimation.telephone }}</li>
+            {% endif %}</li>
+            <li>Vous {{ estimation.maturiteProjet|replace({'curiosite': 'demandez un devis par curiosité', 'devis': 'avez des devis', 'pas': 'n\'avez pas de devis'})}}</li>
+            <li>{% if estimation.client == 'particulier' %}
+                    Vous êtes un {{ estimation.client}}
+                {% else %}
+                    Vous êtes l'{{ estimation.client}} {{ estimation.raisonSocial }}
+                {% endif %}</li>
+            <li>Vous êtes {{ estimation.nom }} {{ estimation.prenom }}</li>
+            <li>Votre E-mail : {{ estimation.email }}</li>
+            <li>{% if estimation.telephone  != false %}
+                    Votre numéro de téléphone : 0{{ estimation.telephone }}
+                {% endif %}</li>
+            <li>{% if estimation.optin != false %}
+            Vous voulez etre inscrit à la newsletter
+                {% endif %}</li>s
         </ul>
         <form method="post">
             <label>En cliquant, j'accepte de donné mes M&M's </label>
             <input type="checkbox" id="estimation_rgpd" name="estimation[rgpd]" required>
             <button type="submit" id="estimation_save" name="estimation[save]">Valider</button>
         </form>
-        <a href="{{ path('estimation', { 'id' : clientId }) }}">Modifier le formulaire</a>
-    {% endblock %}
+        <a href="{{ path('estimation') }}">Modifier le formulaire</a>
 {% endblock %}

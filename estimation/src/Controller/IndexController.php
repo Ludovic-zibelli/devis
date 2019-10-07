@@ -4,10 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Estimation;
 use App\Form\Type\EstimationType;
+use DateTime;
+use Exception;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class IndexController extends AbstractController
 {
@@ -15,27 +18,24 @@ class IndexController extends AbstractController
      * @Route("/estimation", name="estimation")
      * @param Request $request
      * @return Response
-     * @throws \Exception
      */
     public function estimationAction(Request $request)
     {
-        $clientId = $request->query->get('id');
-        if ($clientId) {
-            $estimation = $this->getDoctrine()->getRepository(Estimation::class)->find($clientId);
-        } else {
+        $session = new Session();
+
+        if (!$session->getId()) {
             $estimation = new Estimation();
+        } else {
+            $estimation = $session->get('estimation');
         }
-        $estimation->setDate(new \DateTime('now'));
         $form = $this->createForm(EstimationType::class, $estimation);
 
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
             if ($form->isValid()) {
                 $estimation = $form->getData();
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($estimation);
-                $entityManager->flush();
-                return $this->redirectToRoute('recapitulatif', ['id' =>  $estimation->getClientId()]);
+                $session->set('estimation', $estimation);
+                return $this->redirectToRoute('recapitulatif');
             }
         }
         return $this->render('index/estimation.html.twig', ['form' => $form->createView()]);
@@ -45,20 +45,23 @@ class IndexController extends AbstractController
      * @Route("/recapitulatif", name="recapitulatif")
      * @param Request $request
      * @return Response
+     * @throws Exception
      */
     public function recapitulatifAction(Request $request)
     {
-        $clientId = $request->query->get('id');
-        $estimation = $this->getDoctrine()->getRepository(Estimation::class)->find($clientId);
+        $session = new Session();
+        $estimation = $session->get('estimation');
+
         if ($request->isMethod('POST')) {
             $estimation->setValide(true);
             $estimation->setrgpd(true);
+            $estimation->setDate(new DateTime('now'));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($estimation);
             $entityManager->flush();
-            return $this->redirectToRoute('total', ['id' =>  $estimation->getClientId()]);
+            return $this->redirectToRoute('total');
         }
-        return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation, 'clientId' => $estimation->getClientId()]);
+        return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation]);
     }
 
     /**
@@ -66,7 +69,10 @@ class IndexController extends AbstractController
      */
     public function totalAction()
     {
-        return $this->render('index/total.html.twig');
+        $session = new Session();
+        $estimation = $session->get('estimation');
+        $total = $estimation->calcul();
+        return $this->render('index/total.html.twig', ['estimation' => $estimation, 'total' => $total]);
     }
 
     /**

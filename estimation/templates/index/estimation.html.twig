@@ -1,11 +1,11 @@
 {% extends "base.html.twig" %}
 {% block body %}
     {{ parent() }}
-    {% block inner %}
+    <div id="wrapper">
         {% do form.clientId.setRendered() %}
         {% do form.date.setRendered() %}
         {% do form.valide.setRendered() %}
         {% do form.rgpd.setRendered() %}
         {{ form(form) }}
-    {% endblock %}
+    </div>
 {% endblock %}

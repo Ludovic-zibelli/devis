@@ -29,9 +29,9 @@ class Estimation
     private $contexte;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="string", length=255)
      */
-    private $type = [];
+    private $type;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -189,12 +189,7 @@ class Estimation
     private $optin;
 
     /**
-     * @Assert\Length(
-     *      max = 10,
-     *      maxMessage = "Le champs est limité à {{ limit }} chiffres"
-     * )
-     *
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="integer", length=255, nullable=true)
      */
     private $telephone;
 
@@ -239,12 +234,12 @@ class Estimation
         return $this;
     }
 
-    public function getType(): ?array
+    public function getType(): ?string
     {
         return $this->type;
     }
 
-    public function setType(array $type): self
+    public function setType(string $type): self
     {
         $this->type = $type;
 
@@ -587,12 +582,12 @@ class Estimation
         return $this;
     }
 
-    public function getTelephone(): ?string
+    public function getTelephone(): ?int
     {
         return $this->telephone;
     }
 
-    public function setTelephone(?bool $telephone): self
+    public function setTelephone(?int $telephone): self
     {
         $this->telephone = $telephone;
 
@@ -621,5 +616,65 @@ class Estimation
         $this->valide = $valide;
 
         return $this;
+    }
+
+//Toutes les valeurs sont en heures sauf indication contraire.
+    public function calcul()
+    {
+        //$tauxHoraire est en Euros.
+        $tauxHoraire = 31.59;
+            if ($this->getType() === 'e-commerce') {
+                $type = 50;
+            } else $type = 0;
+            if ($this->getNiveauGraphisme() === 'normal') {
+                $graphisme = 20;
+            } else $graphisme = 50;
+            $nbPage = $this->getNombrePage() * 15;
+            $langue = count($this->getLangue()) * 20;
+            if ($this->getLogo() === true) {
+                $logo = 30;
+            }else $logo = 0;
+            if ($this->getCharteGraphique() === true) {
+                $charte = 30;
+            }else $charte = 0;
+            if ($this->getActualites() === true) {
+                $actualites = 20;
+            }else $actualites = 0;
+            if ($this->getBlog() === true) {
+                $blog = 20;
+            }else $blog = 0;
+            if ($this->getEmailing() === true) {
+                $emailing = 20;
+            }else $emailing = 0;
+            $form = $this->getFormulaire() * 20;
+            if ($this->getEspaceMembre() === true) {
+                $espaceMembre = 30;
+            }else $espaceMembre = 0;
+            if ($this->getForum() === true) {
+                $forum = 10;
+            }else $forum = 0;
+            if ($this->getGmaps() === true) {
+                $gmaps = 5;
+            }else $gmaps = 0;
+            $image = $this->getImage() * 0.25;
+            $video = $this->getVideo() * 0.25;
+            //$domaine est en Euros
+            if ($this->getDomaine() === true) {
+                $domaine = 100;
+            }else $domaine = 0;
+            if ($this->getGestion() === true) {
+                $gestion = 20;
+            }else $gestion = 0;
+            if ($this->getSuiviStats() === true) {
+                $suiviStats = 2;
+            }else $suiviStats = 0;
+            if ($this->getAssistance() === true) {
+                $assistance = 10;
+            }else $assistance = 0;
+            $market = count($this->getMarketingDigital()) * 20;
+
+            //Le calcul est fait de cette maniere : ((Heures additionnés)multiplié par $tauxHoraire)enfin on ajoute $domaine
+            $total = (($type + $graphisme + $nbPage + $langue + $logo + $charte + $actualites + $blog + $emailing + $form + $espaceMembre + $forum + $gmaps + $image + $video + $gestion + $suiviStats + $assistance + $market) * $tauxHoraire) + $domaine;
+            return $total;
     }
 }
