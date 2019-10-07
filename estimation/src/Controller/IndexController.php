@@ -53,7 +53,6 @@ class IndexController extends AbstractController
         $estimation = $session->get('estimation');
 
         if ($request->isMethod('POST')) {
-            $estimation->setValide(true);
             $estimation->setrgpd(true);
             $estimation->setDate(new DateTime('now'));
             $entityManager = $this->getDoctrine()->getManager();

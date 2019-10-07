@@ -7,8 +7,6 @@
       <change beforePath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +245,7 @@
       <workItem from="1570309255588" duration="14915000" />
       <workItem from="1570374335046" duration="8410000" />
       <workItem from="1570406297073" duration="331000" />
-      <workItem from="1570447476918" duration="3213000" />
+      <workItem from="1570447476918" duration="4193000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>

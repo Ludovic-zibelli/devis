@@ -190,7 +190,6 @@ class EstimationType extends AbstractType
             ])
             ->add('telephone', TelType::class, ['required' => false])
             ->add('rgpd', CheckboxType::class)
-            ->add('valide', CheckboxType::class)
             ->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }

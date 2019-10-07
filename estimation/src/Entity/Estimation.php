@@ -198,11 +198,6 @@ class Estimation
      */
     private $rgpd;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $valide;
-
     /** GETTTER & SETTER **/
 
     public function getClientId(): ?string
@@ -602,18 +597,6 @@ class Estimation
     public function setRgpd(bool $rgpd): self
     {
         $this->rgpd = $rgpd;
-
-        return $this;
-    }
-
-    public function getValide(): ?bool
-    {
-        return $this->valide;
-    }
-
-    public function setValide(bool $valide): self
-    {
-        $this->valide = $valide;
 
         return $this;
     }
