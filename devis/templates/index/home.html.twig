@@ -2,8 +2,8 @@
 {% block body %}
     {{ form_start(form) }}
     <div class="container">
-        <h1>Estimation en ligne</h1>
-        <h2>Contexte de votre projet</h2>
+        <h1 class="text-center">Estimation en ligne</h1>
+        <h2 class="text-center">Contexte de votre projet</h2>
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
@@ -18,18 +18,19 @@
                 </div>
             </div>
         </div>
-        <h2>Graphisme</h2>
+        <hr>
+        <h2 class="text-center">Graphisme</h2>
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label>Les éléments de graphisme</label>
+                    <h4 class="text-center">Les éléments de graphisme</h4>
                     <p>Quel(s) élément(s) de graphisme allez-vous fournir ?</p>
                     {{ form_widget(form.graphisme) }}
                 </div>
             </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label>Le niveau de graphisme</label>
+                        <h4 class="text-center">Le niveau de graphisme</h4>
                         <p>Quel niveau de graphisme souhaitez-vous ?</p>
                         {{ form_widget(form.niveauGraphisme) }}
                     </div>
@@ -49,24 +50,26 @@
                 </div>
             </div>
         </div>
-        <h2>Contenue</h2>
+        <hr>
+        <h2 class="text-center">Contenue</h2>
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label>Le nombre de pages</label>
+                    <h3 class="text-center">Le nombre de pages</h3>
                     <p>Indiquez le nombre de pages que contiendra votre site.</p>
                     {{ form_widget(form.nombrePage) }}
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label>Les langues</label>
+                    <h3 class="text-center">Les langues</h3>
                     <p>En quelle(s) langue(s)souhaitez-vous que votre site soit traduit ?</p>
                     {{ form_widget(form.languesSouhaitees) }}
                 </div>
             </div>
         </div>
-        <h2>Fonctionnalités</h2>
+        <hr>
+        <h2 class="text-center">Fonctionnalités</h2>
         <div class="row">
             <div class="col-12">
                 <div class="form-group">
@@ -75,7 +78,8 @@
                 </div>
             </div>
         </div>
-            <h2>Domaine & Hébergement</h2>
+            <hr>
+            <h2 class="text-center">Domaine & Hébergement</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
@@ -90,7 +94,8 @@
                     </div>
                 </div>
             </div>
-            <h2>Suivi & Référencement</h2>
+            <hr>
+            <h2 class="text-center">Suivi & Référencement</h2>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -107,7 +112,8 @@
                     </div>
                 </div>
             </div>
-            <h2>Vous & votre projet</h2>
+            <hr>
+            <h2 class="text-center">Vous & votre projet</h2>
             <div class="row">
                 <div class="col-12">
                     <label>Quelle est la maturité de votre projet ?</label>
@@ -118,9 +124,9 @@
                     {{ form_widget(form.raison_social) }}
                 </div>
             </div>
-
-            <h2>Finalisez l'estimation de votre projet</h2>
-            <p>Renseignez vos coordonnées pour que nous puissions vous contacter</p>
+        <hr>
+            <h2 class="text-center">Finalisez l'estimation de votre projet</h2>
+            <h4 class="text-center">Renseignez vos coordonnées pour que nous puissions vous contacter</h4>
 
             <div class="row">
                 <div class="col-6">
@@ -131,12 +137,14 @@
                         {{ form_widget(form.prenom) }}
                         <label>Votre adresse e-mail</label>
                         {{ form_widget(form.email) }}
+                        {{ form_widget(form.newsletter) }}
+                        {{ form_widget(form.condition_generales) }}
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <p>Vous souhaitez être contacté par téléphone ?</p>
-                        <p>Renseignez votre numéro </p>
+                        <p class="text-center">Vous souhaitez être contacté par téléphone ?</p>
+                        <p class="text-center">Renseignez votre numéro </p>
                         <label>Votre numéro de téléphone</label>
                         {{ form_widget(form.telephone) }}
                         <label>Nom de votre societé</label>
@@ -144,10 +152,17 @@
                     </div>
                 </div>
             </div>
-        <div class="col-12">
-            {{ form_widget(form.valider, {'label' : 'Valider'}) }}
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="form-group">
+                    <button class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+            <div class="col-4"></div>
         </div>
     </div>
+
 
 
 

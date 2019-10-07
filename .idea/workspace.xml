@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/devis/templates/index/estimation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/devis/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devis/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/devis/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devis/templates/index/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/devis/templates/index/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +62,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/devis/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="413">
+              <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+              <folding>
+                <element signature="e#34#62#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,19 +84,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/devis/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/devis/src/Form/EstimationType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="143" column="26" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="26" />
+            <state relative-caret-position="529">
+              <caret line="158" column="35" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
               <folding>
                 <element signature="e#28#54#0#PHP" expanded="true" />
               </folding>
@@ -101,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/devis/src/Entity/Estimation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+            <state relative-caret-position="370">
+              <caret line="183" column="32" selection-start-line="183" selection-start-column="13" selection-end-line="183" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -121,11 +118,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/devis/templates/index/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="68">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/devis/templates/index/estimation.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -152,11 +158,15 @@
       <list>
         <option value="$PROJECT_DIR$/devis/.env" />
         <option value="$PROJECT_DIR$/devis/src/Entity/Devis.php" />
-        <option value="$PROJECT_DIR$/devis/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/devis/templates/index/crm.html.twig" />
         <option value="$PROJECT_DIR$/devis/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/devis/src/Entity/Estimation.php" />
         <option value="$PROJECT_DIR$/devis/src/Form/EstimationType.php" />
+        <option value="$PROJECT_DIR$/devis/config/packages/twig.yaml" />
         <option value="$PROJECT_DIR$/devis/templates/index/home.html.twig" />
+        <option value="$PROJECT_DIR$/devis/templates/index/estimation.html.twig" />
+        <option value="$PROJECT_DIR$/devis/src/Controller/CommandeRepository.php" />
+        <option value="$PROJECT_DIR$/devis/src/Controller/IndexController.php" />
       </list>
     </option>
   </component>
@@ -308,20 +318,14 @@
               <item name="devis2" type="462c0819:PsiDirectoryNode" />
               <item name="devis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="devis2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="devis2" type="462c0819:PsiDirectoryNode" />
+              <item name="devis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devis2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devis2" type="462c0819:PsiDirectoryNode" />
-              <item name="devis" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devis2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="devis2" type="462c0819:PsiDirectoryNode" />
-              <item name="devis" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -389,7 +393,7 @@
       <workItem from="1569786389570" duration="6859000" />
       <workItem from="1569919265029" duration="2844000" />
       <workItem from="1570005157778" duration="7732000" />
-      <workItem from="1570391442003" duration="2135000" />
+      <workItem from="1570391442003" duration="9316000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -468,17 +472,24 @@
       <option name="project" value="LOCAL" />
       <updated>1570181641408</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Modification BDD pour ajout estimation,prix,maturation du projet">
+      <created>1570393699148</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570393699148</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39214000" />
+    <option name="totallyTimeSpent" value="46395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25945538" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25945538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -553,7 +564,8 @@
     <MESSAGE value="Mise en page de la page estimation" />
     <MESSAGE value="Insertion du form sur la page Home" />
     <MESSAGE value="Suite de mise en forme du form estimation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Suite de mise en forme du form estimation" />
+    <MESSAGE value="Modification BDD pour ajout estimation,prix,maturation du projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification BDD pour ajout estimation,prix,maturation du projet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/devis/src/Entity/Client.php" />
@@ -566,17 +578,51 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/devis/src/Form/Type/DevisType.php" />
-    <entry file="file://$PROJECT_DIR$/devis/src/Controller/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/devis/src/Form/RdvType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="529">
+          <caret line="190" column="53" selection-start-line="190" selection-start-column="53" selection-end-line="190" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devis/templates/index/crm.html.twig">
+    <entry file="file://$PROJECT_DIR$/devis/src/Entity/Estimation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        <state relative-caret-position="370">
+          <caret line="183" column="32" selection-start-line="183" selection-start-column="13" selection-end-line="183" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/src/Form/EstimationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="158" column="35" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+          <folding>
+            <element signature="e#28#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/config/packages/twig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/templates/index/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/templates/index/estimation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -587,37 +633,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devis/src/Form/RdvType.php">
+    <entry file="file://$PROJECT_DIR$/devis/templates/index/crm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devis/src/Controller/CommandeRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/devis/src/Entity/Estimation.php">
+    <entry file="file://$PROJECT_DIR$/devis/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devis/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="190" column="53" selection-start-line="190" selection-start-column="53" selection-end-line="190" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devis/src/Form/EstimationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="143" column="26" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="26" />
+        <state relative-caret-position="413">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
           <folding>
-            <element signature="e#28#54#0#PHP" expanded="true" />
+            <element signature="e#34#62#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devis/templates/index/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
