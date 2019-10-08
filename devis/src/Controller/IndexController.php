@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Estimation;
 use App\Form\EstimationType;
 use App\Repository\EstimationRepository;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -36,10 +37,26 @@ class IndexController extends AbstractController
      */
     public function home(Request $request)
     {
+        $estimation = new Estimation();
         $form = $this->createForm(EstimationType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $this->em->persist($estimation);
+            $this->em->flush();
+        }
 
         return $this->render('index/home.html.twig', array(
             'form' => $form->createView(),
             ));
+    }
+
+    /**
+     * @Route("/estimation", name="estimation")
+     */
+    public function estimation()
+    {
+        return $this->render('index/estimation.html.twig');
     }
 }
