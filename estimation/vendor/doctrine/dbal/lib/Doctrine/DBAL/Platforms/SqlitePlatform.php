@@ -425,7 +425,7 @@ class SqlitePlatform extends AbstractPlatform
         $table = str_replace('.', '__', $table);
 
         return sprintf(
-            "SELECT sql FROM sqlite_master WHERE type='index' AND tbl_name = %s AND sql NOT NULL ORDER BY name",
+            "SELECT sql FROM sqlite_master WHERE type=estimationtion' AND tbl_name = %s AND sql NOT NULL ORDER BY name",
             $this->quoteStringLiteral($table)
         );
     }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use App\Entity\Estimation;
@@ -53,7 +52,7 @@ class IndexController extends AbstractController
         $estimation = $session->get('estimation');
 
         if ($request->isMethod('POST')) {
-            $estimation->setrgpd(true);
+             $estimation->setrgpd(true);
             $estimation->setDate(new DateTime('now'));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($estimation);
@@ -72,13 +71,5 @@ class IndexController extends AbstractController
         $estimation = $session->get('estimation');
         $total = $estimation->calcul();
         return $this->render('index/total.html.twig', ['estimation' => $estimation, 'total' => $total]);
-    }
-
-    /**
-     * @Route("/crm", name="crm")
-     */
-    public function crmAction()
-    {
-        return $this->render('index/crm.html.twig');
     }
 }
