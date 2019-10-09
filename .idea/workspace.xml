@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/crm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SqlitePlatform.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SqlitePlatform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Environment.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Environment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/EmbedNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/EmbedNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/Expression/Test/DivisiblebyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/Expression/Test/DivisiblebyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ForLoopNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ForLoopNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ForNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ForNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ModuleNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Node/ModuleNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Parser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Test/IntegrationTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/Test/IntegrationTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/TokenParser/EmbedTokenParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/src/TokenParser/EmbedTokenParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/EnvironmentTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/EnvironmentTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ErrorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ErrorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ExpressionParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ExpressionParserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Extension/SandboxTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Fixtures/errors/leak-output.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Fixtures/errors/leak-output.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/LexerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/LexerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Loader/ChainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Loader/ChainTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Loader/FilesystemTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Loader/FilesystemTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Node/ForTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Node/ForTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/NodeVisitor/OptimizerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ParserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/ParserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/AbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/AbstractTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/BlackfireTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/BlackfireTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/HtmlTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/HtmlTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/TextTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/Profiler/Dumper/TextTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/TemplateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/TemplateWrapperTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/twig/twig/test/Twig/Tests/TemplateWrapperTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +249,8 @@
       <workItem from="1570374335046" duration="8410000" />
       <workItem from="1570406297073" duration="331000" />
       <workItem from="1570447476918" duration="9413000" />
-      <workItem from="1570554027746" duration="15284000" />
+      <workItem from="1570554027746" duration="15366000" />
+      <workItem from="1570634578214" duration="2801000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>

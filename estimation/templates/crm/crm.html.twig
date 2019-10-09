@@ -1,9 +1,9 @@
-{% if not app.user %}
-    <li>
-        <a href="{{ path('app_login') }}"> connexion </a>
-    </li>
-{% else %}
-    <li>
-        <a href="{{ path('app_logout') }}"> déconnexion </a>
-    </li>
-{% endif %}
+{% extends "base.html.twig" %}
+{% block body %}
+    {{ parent() }}
+    {% if app.user %}
+        <div class="mb-3">
+            Vous êtes connecté, <a href="{{ path('app_logout') }}">déconnexion</a>
+        </div>
+    {% endif %}
+{% endblock %}
