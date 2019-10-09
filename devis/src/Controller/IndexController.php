@@ -9,6 +9,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends AbstractController
 {
@@ -33,18 +34,20 @@ class IndexController extends AbstractController
     /**
      * @Route("/" , name="home")
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
+     * @throws \Exception
      */
     public function home(Request $request)
     {
         $estimation = new Estimation();
-        $form = $this->createForm(EstimationType::class);
+        $form = $this->createForm(EstimationType::class, $estimation);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid())
         {
             $this->em->persist($estimation);
             $this->em->flush();
+            dump($estimation);
         }
 
         return $this->render('index/home.html.twig', array(
