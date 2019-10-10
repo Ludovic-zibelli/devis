@@ -19,6 +19,9 @@ class IndexController extends AbstractController
     private $repository;
 
     private $em;
+    private $marketing_prix;
+    private $domaine;
+    private $hebergment;
 
     /**
      * IndexController constructor.
@@ -45,9 +48,52 @@ class IndexController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
-            $this->em->persist($estimation);
-            $this->em->flush();
-            dump($estimation);
+            $prix_page = $estimation->getNombrePage()* 157;
+            $marketing = $estimation->getPrestationWebmarketing();
+            $depot = $estimation->getDepotDomaine();
+            $hebergement = $estimation->getGestionHebergement();
+
+            if($marketing == 'aucun')
+            {
+                $this->marketing_prix = 0;
+
+            }
+            if ($marketing == 'referencement_naturel')
+            {
+                $this->marketing_prix = 125;
+            }
+            if ($marketing == 'redaction_web')
+            {
+                $this->marketing_prix = 156;
+            }
+            if ($marketing == 'campagne_marketing')
+            {
+                $this->marketing_prix = 230;
+            }
+
+            if($depot == true)
+            {
+                $this->domaine = 50;
+            }
+            if($depot == false)
+            {
+                $this->domaine = 0;
+            }
+            if($hebergement == true)
+            {
+                $this->hebergment = 50;
+            }
+            if($hebergement == false)
+            {
+                $this->hebergment = 0;
+            }
+
+
+            $prix = $this->marketing_prix + $prix_page + $this->hebergment + $this ->domaine ;
+            //$this->em->persist($estimation);
+            //$this->em->flush();
+            dump($depot);
+            //return $this->redirectToRoute('estimation');
         }
 
         return $this->render('index/home.html.twig', array(
