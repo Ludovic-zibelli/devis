@@ -658,6 +658,6 @@ class Estimation
 
             //Le calcul est fait de cette maniere : ((Heures additionnés)multiplié par $tauxHoraire)enfin on ajoute $domaine
             $total = (($type + $graphisme + $nbPage + $langue + $logo + $charte + $actualites + $blog + $emailing + $form + $espaceMembre + $forum + $gmaps + $image + $video + $gestion + $suiviStats + $assistance + $market) * $tauxHoraire) + $domaine;
-            return $total;
+            return round($total, 0);
     }
 }

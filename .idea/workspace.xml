@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Entity/Estimation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,6 +263,9 @@
       <workItem from="1570447476918" duration="9413000" />
       <workItem from="1570554027746" duration="15366000" />
       <workItem from="1570634578214" duration="2801000" />
+      <workItem from="1570701109804" duration="1966000" />
+      <workItem from="1570811377931" duration="800000" />
+      <workItem from="1570826869760" duration="14753000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>

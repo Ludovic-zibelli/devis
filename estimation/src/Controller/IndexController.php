@@ -24,6 +24,7 @@ class IndexController extends AbstractController
 
         if (!$session->getId()) {
             $estimation = new Estimation();
+
         } else {
             $estimation = $session->get('estimation');
         }
@@ -50,16 +51,19 @@ class IndexController extends AbstractController
     {
         $session = new Session();
         $estimation = $session->get('estimation');
-
-        if ($request->isMethod('POST')) {
-             $estimation->setrgpd(true);
-            $estimation->setDate(new DateTime('now'));
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($estimation);
-            $entityManager->flush();
-            return $this->redirectToRoute('total');
-        }
-        return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation]);
+        if ($estimation->getrgpd() === false) {
+            if ($request->isMethod('POST')) {
+                $estimation->setrgpd(true);
+                $estimation->setDate(new DateTime('now'));
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($estimation);
+                $entityManager->flush();
+                return $this->redirectToRoute('total');
+            }
+            return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation]);
+        }else
+        $session->invalidate();
+        return $this->redirectToRoute('estimation');
     }
 
     /**
@@ -68,8 +72,13 @@ class IndexController extends AbstractController
     public function totalAction()
     {
         $session = new Session();
+        $response = new Response();
         $estimation = $session->get('estimation');
-        $total = $estimation->calcul();
-        return $this->render('index/total.html.twig', ['estimation' => $estimation, 'total' => $total]);
+        if (!empty($estimation) && $response->getStatusCode() === 200) {
+            $total = $estimation->calcul();
+            return $this->render('index/total.html.twig', ['estimation' => $estimation, 'total' => $total]);
+        }else
+            $session->invalidate();
+            return $this->redirectToRoute('estimation');
     }
 }
