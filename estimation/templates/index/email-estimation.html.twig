@@ -1,11 +1,5 @@
-{% extends "base.html.twig" %}
-{% block body %}
-    {{ parent() }}
-    Votre demande à été envoyé.
-    A partir de {{ total }}€
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;">Prendre RDV avec un conseiller</a>
+Bonjour {{ estimation.prenom }}, merci d'avoir choisi notre équipe.<br/>
+Votre site web à partir de {{ total }}€
     <ul>
         <li>Votre demande concerne la {{ estimation.contexte }} d'un site web</li>
         <li>Vous voulez un site web de type : {{ estimation.type }}</li>
@@ -35,9 +29,9 @@
         {% if estimation.blog != false %}
             <li>Vous voulez ajouter un blog au site web</li>
         {% endif %}
-        {% if estimation.emailing != false %}
+       {% if estimation.emailing != false %}
             <li>Vous souhaitez une solution d'emailing</li>
-        {% endif %}
+       {% endif %}
         {% if estimation.formulaire == 0 %}
             <li>Vous ne souhaitez pas de formulaire</li>
         {% else %}
@@ -86,8 +80,11 @@
             <li>Vous voudriez
             {% for i in 1..md %}
                 {% set cycle = cycle(estimation.marketingDigital, i) %}
-                <li>{{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}</li>
+                    <li>{{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}</li>
             {% endfor %}
         {% endif %}
     </ul>
-{% endblock %}
+A bientôt sur DigitalUser.fr<br/>
+<a href="https://calendly.com/jkenobi/rdv-telephonique">Prendre RDV avec un conseiller</a> ou appelez nous au 01 33 33 33 33
+<hr/>
+<img alt="Digital User - L'utilisateur au cœur de votre projet" data-src="https://www.digitaluser.fr/wp-content/uploads/2019/08/digital-user-logo-couleur-header.png" src="https://www.digitaluser.fr/wp-content/uploads/2019/08/digital-user-logo-couleur-header.png">
