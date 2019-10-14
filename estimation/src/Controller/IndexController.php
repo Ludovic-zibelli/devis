@@ -5,6 +5,8 @@ use App\Entity\Estimation;
 use App\Form\Type\EstimationType;
 use DateTime;
 use Exception;
+use Swift_Mailer;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -44,10 +46,11 @@ class IndexController extends AbstractController
     /**
      * @Route("/recapitulatif", name="recapitulatif")
      * @param Request $request
+     * @param Swift_Mailer $mailer
      * @return Response
      * @throws Exception
      */
-    public function recapitulatifAction(Request $request)
+    public function recapitulatifAction(Request $request, Swift_Mailer $mailer)
     {
         $session = new Session();
         $estimation = $session->get('estimation');
@@ -58,6 +61,18 @@ class IndexController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($estimation);
                 $entityManager->flush();
+                $total = $estimation->calcul();
+                $message = (new \Swift_Message('Estimation de votre projet.'))
+                    ->setFrom('contact@digitaluser.fr')
+                    ->setTo($estimation->getEmail())
+                    ->setBody(
+                        $this->renderView(
+                            'index/email-estimation.html.twig',
+                            ['estimation' => $estimation, 'total' => $total]
+                        ),
+                        'text/html'
+                    );
+                $mailer->send($message);
                 return $this->redirectToRoute('total');
             }
             return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation]);
@@ -68,6 +83,7 @@ class IndexController extends AbstractController
 
     /**
      * @Route("/total", name="total")
+     * @return RedirectResponse|Response
      */
     public function totalAction()
     {
