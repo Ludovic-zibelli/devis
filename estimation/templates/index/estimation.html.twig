@@ -5,6 +5,25 @@
         {% do form.clientId.setRendered() %}
         {% do form.date.setRendered() %}
         {% do form.rgpd.setRendered() %}
-        {{ form(form) }}
+        {{ form_start(form) }}
+        <div class="container">
+            <h1 class="text-center">Estimation en ligne</h1>
+            <h2 class="text-center">Contexte de votre projet</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Votre projet concerne</p>
+                        {{ form_widget(form.contexte) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Vous souhaitez</p>
+                        {{ form_widget(form.type) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 {% endblock %}

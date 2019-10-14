@@ -30,6 +30,7 @@
     <link rel="stylesheet" id="mc4wp-form-basic-css" href="https://www.digitaluser.fr/wp-content/plugins/mailchimp-for-wp/assets/css/form-basic.min.css?ver=4.5.3" type="text/css" media="all">
     <script type="text/javascript" src="https://www.digitaluser.fr/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
     <script type="text/javascript" src="https://www.digitaluser.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <style type="text/css">
         @font-face {
@@ -61,7 +62,7 @@
 
 <body data-rsssl="1" class="et_transparent_nav et_fullwidth_nav et_non_fixed_nav et_show_nav et_cover_background et_pb_gutters2 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_fullscreen">
 
-{% block body %}
+
     <div id="page-container">
         <div class="et_slide_in_menu_container">
             <span class="mobile_menu_bar et_toggle_fullscreen_menu"><i class="fas fa-times fa-2x"></i></span>
@@ -172,7 +173,7 @@
                 </div>
 			</div>
 		</header>
-        {% endblock %}
+        {% block body %}{% endblock %}
         <Footer>
             <div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
 					<div class="et_pb_row et_pb_row_2">
