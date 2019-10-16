@@ -23,7 +23,160 @@
                     </div>
                 </div>
             </div>
+            <hr>
+            <h2 class="text-center">Graphisme</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <h4 class="text-center">Les éléments de graphisme</h4>
+                        <p>Quel(s) élément(s) de graphisme allez-vous fournir ?</p>
+                        {{ form_widget(form.elementsGraphiques) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <h4 class="text-center">Le niveau de graphisme</h4>
+                        <p>Quel niveau de graphisme souhaitez-vous ?</p>
+                        {{ form_widget(form.niveauGraphisme) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous créer un logo ?</label>
+                        {{ form_widget(form.logo) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous créer une charte graphique ?</label>
+                        {{ form_widget(form.charteGraphique) }}
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">Contenue</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <h3 class="text-center">Le nombre de pages</h3>
+                        <p>Indiquez le nombre de pages que contiendra votre site.</p>
+                        {{ form_widget(form.nombrePage) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <h3 class="text-center">Les langues</h3>
+                        <p>En quelle(s) langue(s)souhaitez-vous que votre site soit traduit ?</p>
+                        {{ form_widget(form.langue) }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Fonctionnalités</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Quelles seront les fonctionnalités présentes sur votre site ? </p>
+                        {{ form_widget(form.actualites) }}
+                        {{ form_widget(form.blog) }}
+                        {{ form_widget(form.emailing) }}
+                        {{ form_widget(form.espaceMembre) }}
+                        {{ form_widget(form.forum) }}
+                        {{ form_widget(form.gMaps) }}
 
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Quelles est votre hebergeur video ?</p>
+                        {{ form_widget(form.hebergeurVideo) }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Domaine & Hébergement</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous déposer un nom de domaine pour votre site ?</label>
+                        {{ form_widget(form.domaine) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous un hébergement pour votre site ?</label>
+                        {{ form_widget(form.gestion) }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Suivi & Référencement</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Souhaitez-vous une assistance techenique mensuelle ?</label>
+                        {{ form_widget(form.assistance) }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>De quelle(s) prestations marketing avez-vous besoin ?</label>
+                        {{ form_widget(form.marketingDigital) }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Vous & votre projet</h2>
+            <div class="row">
+                <div class="col-12">
+                    <label>Quelle est la maturité de votre projet ?</label>
+                    {{ form_widget(form.maturiteProjet) }}
+                </div>
+                <div class="col-12">
+                    <label>Quelle est votre raison sociale ?</label>
+                    {{ form_widget(form.client) }}
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Finalisez l'estimation de votre projet</h2>
+            <h4 class="text-center">Renseignez vos coordonnées pour que nous puissions vous contacter</h4>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <br>
+                        <label>Nom</label>
+                        {{ form_widget(form.nom) }}
+                        <label>Prenom</label>
+                        {{ form_widget(form.prenom) }}
+                        <label>Votre adresse e-mail</label>
+                        {{ form_widget(form.email) }}
+                        {{ form_widget(form.optin) }}
+
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <p class="text-center">Vous souhaitez être contacté par téléphone ?</p>
+                        <p class="text-center">Renseignez votre numéro </p>
+                        <label>Votre numéro de téléphone</label>
+                        {{ form_widget(form.telephone) }}
+                        <label>Nom de votre societé</label>
+                        {{ form_widget(form.raisonSocial) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Valide</button>
+                            {{ form_widget(form.save) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}

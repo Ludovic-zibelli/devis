@@ -26,16 +26,16 @@ class EstimationType extends AbstractType
             ])
             ->add('contexte', ChoiceType::class, [
                 'choices'  => [
-                    'Création' => 'creation',
-                    'Refonte' => 'refonte',
+                    'Une création de site' => 'creation',
+                    'Une refonte de site' => 'refonte',
                 ],
                 'label' => 'Contexte du projet',
             ])
             ->add('type', ChoiceType::class, [
                 'choices'  => [
-                    'Vitrine' => 'vitrine',
-                    'E-commerce' => 'e-commerce',
-                    'Blog' => 'blog',
+                    'Un site vitrine' => 'vitrine',
+                    'Un site marchand E-Commerce' => 'e-commerce',
+                    'Un blog d\'entreprise' => 'blog',
                 ],
                 'required' => true,
                 'help' => 'Un site vitrine est ..., un site e-commerce est ... et un Blog fait ...',
@@ -45,25 +45,33 @@ class EstimationType extends AbstractType
                 'choices'  => [
                     'Aucun' => 'aucun',
                     'Zoning' => 'zoning',
-                    'Mock-up' => 'mock-up',
+                    'Maquettes ou Mock-up' => 'mock-up',
                 ],
                 'help' => 'Le zoning est ... et la maquette ...',
                 'label' => 'Éléments de graphisme fournis par le commanditaire',
             ])
             ->add('niveauGraphisme', ChoiceType::class, [
                 'choices'  => [
-                    'Normal' => 'normal',
+                    'A partir d\'un modèle' => 'normal',
                     'Sur-mesure' => 'sur-mesure',
                 ],
                 'label' => 'Niveau de graphisme souhaité',
             ])
-            ->add('logo', CheckboxType::class, [
-                'label'    => 'Création de logo',
-                'required' => false,
+            ->add('logo', ChoiceType::class, [
+                'choices' => [
+                    'Oui' => true,
+                    'Non, j\'ai déjà un logo et je souhaite l\'utiliser' => false,
+                ],
+                'required' => true,
+                'multiple' => false,
             ])
-            ->add('charteGraphique', CheckboxType::class, [
-                'label'    => 'Création de charte graphique',
-                'required' => false,
+            ->add('charteGraphique', ChoiceType::class, [
+                'choices' => [
+                    'Oui' => true,
+                    'Non, j\'ai déjà une charte et je souhaite l\'utiliser' => false,
+                ],
+                'required' => true,
+                'multiple' => false,
             ])
             ->add('nombrePage', IntegerType::class, [
                 'attr' => [
@@ -139,24 +147,39 @@ class EstimationType extends AbstractType
                 'multiple'  => true,
                 'required' => false,
             ])
-            ->add('domaine', CheckboxType::class, [
-                'label'    => 'Dépôt du domaines par notre équipe',
-                'required' => false,
+            ->add('domaine', ChoiceType::class, [
+                'choices' => [
+                    'Oui, je souhaite prendre un nom de domaine' => true,
+                    'Non, j\'ai déjà un nom de domaine' => false,
+                ],
+
+                'required' => true,
+                'multiple' => false,
             ])
-            ->add('gestion', CheckboxType::class, [
-                'label'    => 'Gestion de l\'hébergement par notre équipe',
-                'required' => false,
+            ->add('gestion', ChoiceType::class, [
+                'choices' => [
+                    'Oui, je souhaite faire héberger mon site' => true,
+                    'Non, j\'ai déja un prestataire pour l\'hébergement' => false,
+                ],
+
+                'required' => true,
+                'multiple' => false,
             ])
             ->add('suiviStats', CheckboxType::class, [
                 'label'    => 'Rapport mensuel de suivi des stats',
                 'required' => false,
             ])
-            ->add('assistance', CheckboxType::class, [
-                'label'    => 'Assistance technique mensuelle',
-                'required' => false,
+            ->add('assistance', ChoiceType::class, [
+                'choices' => [
+                    'Oui' => true,
+                    'Non' => false,
+                ],
+                'required' => true,
+                'multiple' => false,
             ])
             ->add('marketingDigital', ChoiceType::class, [
                 'choices'  => [
+                    'Aucune' => 'aucun',
                     'Accompagnement réseaux sociaux' => 'res_soc',
                     'Référencement naturel' => 'ref_nat',
                     'Accompagnement rédaction web' => 'redac',
@@ -168,9 +191,9 @@ class EstimationType extends AbstractType
             ])
             ->add('maturiteProjet', ChoiceType::class, [
                 'choices'  => [
-                    'a déjà des devis' => 'devis',
-                    'n\'a pas encore de devis' => 'pas',
-                    'par curiosité' => 'curiosite',
+                    'J\'ai déjà un ou plusieurs devis' => 'devis',
+                    'Je n\'ai pas encore de devis' => 'pas',
+                    'Je damande un devis par curiosité' => 'curiosite',
                 ],
             ])
             ->add('client', ChoiceType::class, [
@@ -185,7 +208,7 @@ class EstimationType extends AbstractType
             ->add('email', EmailType::class)
             ->add('raisonSocial', TextType::class, ['required' => false])
             ->add('optin', CheckboxType::class, [
-                'label'    => 'newsletter',
+                'label'    => 'Je m\'abonne à la newsletter Digital User',
                 'required' => false,
             ])
             ->add('telephone', TelType::class, ['required' => false])

@@ -1,21 +1,36 @@
 {% extends "base.html.twig" %}
 {% block body %}
     {{ parent() }}
-        <ul>
-            <li>Votre demande concerne la {{ estimation.contexte }} d'un site web</li>
-            <li>Vous voulez un site web de type : {{ estimation.type }}</li>
-            <li>{% if estimation.elementsGraphiques == 'aucun' %}
-                Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Recapitulatif de votre Estimation
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center">Contexte de votre projet</h5>
+                <p class="card-text">-Votre demande concerne la {{ estimation.contexte }} d'un site web </p>
+                <p class="card-text">-Vous souhaitez un site web de type: {{ estimation.type }}</p>
+                <h5 class="card-title text-center">Graphisme</h5>
+                <p>{% if estimation.elementsGraphiques == 'aucun' %}
+                        -Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique
                     {% else %}
-                        Vous disposez d'un {{ estimation.elementsGraphiques}}
-                {% endif %}</li>
-            <li>Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</li>
-            <li>{% if estimation.logo != false %}
-                    Vous souhaitez que nous créions votre logo
-                {% endif %}</li>
-            <li>{% if estimation.charteGraphique != false %}
-                    Vous souhaitez que nous créions votre charte graphique
-                {% endif %}</li>
+                        -Vous disposez d'un {{ estimation.elementsGraphiques}}
+                    {% endif %}
+                </p>
+                <p>-Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</p>
+                <p>{% if estimation.logo != false %}
+                        -Vous souhaitez que nous créions votre logo
+                    {% endif %}
+                </p>
+                <p>{% if estimation.charteGraphique != false %}
+                        -Vous souhaitez que nous créions votre charte graphique
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+        <ul>
+
             <li>Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
             {% set l = estimation.langue|length %}
             <li>{% if l != 0 %}
