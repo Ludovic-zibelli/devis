@@ -61,8 +61,6 @@
     <meta name="msapplication-TileImage" content="https://www.digitaluser.fr/wp-content/uploads/2019/08/cropped-digital-user-logo-icon-270x270.png">
 
 <body data-rsssl="1" class="et_transparent_nav et_fullwidth_nav et_non_fixed_nav et_show_nav et_cover_background et_pb_gutters2 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_fullscreen">
-
-
     <div id="page-container">
         <div class="et_slide_in_menu_container">
             <span class="mobile_menu_bar et_toggle_fullscreen_menu"><i class="fas fa-times fa-2x"></i></span>
@@ -108,7 +106,7 @@
                     </div>
                     <div class="et_pb_column et_pb_column_1_6 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough et_pb_column_empty"></div>
                     <div class="et_pb_column et_pb_column_1_6 et_pb_column_2 et_pb_css_mix_blend_mode_passthrough et_pb_column_empty"></div>
-                    <div class="et_pb_column et_pb_column_1_6 et_pb_column_3 et_pb_css_mix_blend_mode_passthrough"></div>
+                    {% if app.user != true %}
                     <div class="et_pb_column et_pb_column_1_6 et_pb_column_4 et_pb_css_mix_blend_mode_passthrough">
                         <div class="et_pb_module et_pb_text et_pb_text_0 et_pb_bg_layout_light  et_pb_text_align_left">
                             <div class="et_pb_text_inner">
@@ -167,9 +165,15 @@
                                 </div>
                                 <div class="asl_init_data wpdreams_asl_data_ct" style="display:none !important;" id="asl_init_id_1" data-asldata="ew0KICAgICJob21ldXJsIjogImh0dHBzOi8vd3d3LmRpZ2l0YWx1c2VyLmZyLyIsDQogICAgInJlc3VsdHN0eXBlIjogInZlcnRpY2FsIiwNCiAgICAicmVzdWx0c3Bvc2l0aW9uIjogImhvdmVyIiwNCiAgICAiaXRlbXNjb3VudCI6IDQsDQogICAgImltYWdld2lkdGgiOiA3MCwNCiAgICAiaW1hZ2VoZWlnaHQiOiA3MCwNCiAgICAicmVzdWx0aXRlbWhlaWdodCI6ICI3MHB4IiwNCiAgICAic2hvd2F1dGhvciI6IDAsDQogICAgInNob3dkYXRlIjogMCwNCiAgICAic2hvd2Rlc2NyaXB0aW9uIjogMSwNCiAgICAiY2hhcmNvdW50IjogIDAsDQogICAgImRlZmF1bHRJbWFnZSI6ICJodHRwOi8vd3d3LmRpZ2l0YWx1c2VyLmZyL3dwLWNvbnRlbnQvcGx1Z2lucy9hamF4LXNlYXJjaC1saXRlL2ltZy9kZWZhdWx0LmpwZyIsDQogICAgImhpZ2hsaWdodCI6IDAsDQogICAgImhpZ2hsaWdodHdob2xld29yZHMiOiAxLA0KICAgICJzY3JvbGxUb1Jlc3VsdHMiOiAwLA0KICAgICJyZXN1bHRhcmVhY2xpY2thYmxlIjogMSwNCiAgICAiYXV0b2NvbXBsZXRlIjogew0KICAgICAgICAiZW5hYmxlZCIgOiAxLA0KICAgICAgICAibGFuZyIgOiAiZnIiDQogICAgfSwNCiAgICAidHJpZ2dlcm9udHlwZSI6IDEsDQogICAgInRyaWdnZXJfb25fY2xpY2siOiAwLA0KICAgICJ0cmlnZ2VyX29uX2ZhY2V0X2NoYW5nZSI6IDEsDQogICAgInNldHRpbmdzaW1hZ2Vwb3MiOiAicmlnaHQiLA0KICAgICJocmVzdWx0YW5pbWF0aW9uIjogImZ4LW5vbmUiLA0KICAgICJ2cmVzdWx0YW5pbWF0aW9uIjogImZ4LW5vbmUiLA0KICAgICJocmVzdWx0aGlkZWRlc2MiOiAiMSIsDQogICAgInByZXNjb250YWluZXJoZWlnaHQiOiAiNDAwcHgiLA0KICAgICJwc2hvd3N1YnRpdGxlIjogIjAiLA0KICAgICJwc2hvd2Rlc2MiOiAiMSIsDQogICAgImNsb3NlT25Eb2NDbGljayI6IDEsDQogICAgImlpZk5vSW1hZ2UiOiAiZGVzY3JpcHRpb24iLA0KICAgICJpaVJvd3MiOiAyLA0KICAgICJpaXRlbXNXaWR0aCI6IDIwMCwNCiAgICAiaWl0ZW1zSGVpZ2h0IjogMjAwLA0KICAgICJpaXNob3dPdmVybGF5IjogMSwNCiAgICAiaWlibHVyT3ZlcmxheSI6IDEsDQogICAgImlpaGlkZUNvbnRlbnQiOiAxLA0KICAgICJpaWFuaW1hdGlvbiI6ICIxIiwNCiAgICAiYW5hbHl0aWNzIjogMSwNCiAgICAiYW5hbHl0aWNzU3RyaW5nIjogIj9hamF4X3NlYXJjaD17YXNsX3Rlcm19IiwNCiAgICAicmVkaXJlY3RvbmNsaWNrIjogMSwNCiAgICAicmVkaXJlY3RDbGlja1RvIjogInJlc3VsdHNfcGFnZSIsDQogICAgInJlZGlyZWN0Q2xpY2tMb2MiOiAic2FtZSIsDQogICAgInJlZGlyZWN0X29uX2VudGVyIjogMSwNCiAgICAicmVkaXJlY3RFbnRlclRvIjogInJlc3VsdHNfcGFnZSIsDQogICAgInJlZGlyZWN0RW50ZXJMb2MiOiAic2FtZSIsDQogICAgInJlZGlyZWN0X3VybCI6ICI/cz17cGhyYXNlfSIsDQogICAgIm92ZXJyaWRld3BkZWZhdWx0IjogMCwNCiAgICAib3ZlcnJpZGVfbWV0aG9kIjogImdldCINCn0NCg==">
                                 </div>
+
                             </div>
                         </div>
                     </div>
+                    {% endif %}
+                    <div class="et_pb_column et_pb_column_1_6 et_pb_column_3 et_pb_css_mix_blend_mode_passthrough">
+                        {% if app.user %}
+                            <a href="{{ path('app_logout') }}"><button class="btn-warning btn">se déconnecter</button></a>
+                        {% endif %}</div>
                 </div>
 			</div>
 		</header>

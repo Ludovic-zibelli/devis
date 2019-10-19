@@ -3,8 +3,10 @@ namespace App\Controller;
 
 use App\Entity\Estimation;
 use App\Form\Type\EstimationType;
+use Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Swift_Mailer;
+use DateTime;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -45,15 +47,16 @@ class CrmController extends AbstractController
      * @Security("is_granted('ROLE_ADMIN')")
      * @param Request $request
      * @return RedirectResponse|Response
+     * @throws Exception
      */
     public function formCreationAction(Request $request)
     {
         $estimation = new Estimation();
         $form = $this->createForm(EstimationType::class, $estimation);
-
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
             if ($form->isValid()) {
+                $estimation->setDate(new DateTime('now'));
                 $estimation = $form->getData();
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($estimation);
@@ -85,6 +88,10 @@ class CrmController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($estimation);
                 $entityManager->flush();
+                $this->addFlash(
+                    'success',
+                    'La modification a bien été prise en compte'
+                );
                 return $this->redirectToRoute('crm_info', ['slug' => $clientId]);
             }
         }
@@ -115,6 +122,10 @@ class CrmController extends AbstractController
                 'text/html'
             );
         $mailer->send($message);
+        $this->addFlash(
+            'success',
+            'L\'estimation a bien été envoyé par E-mail'
+        );
         return $this->redirectToRoute('crm_info', ['slug' => $clientId]);
     }
 
@@ -132,6 +143,10 @@ class CrmController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->remove($estimation);
         $entityManager->flush();
+        $this->addFlash(
+            'success',
+            'Suppression réussie'
+        );
         return $this->redirectToRoute('crm');
     }
 }

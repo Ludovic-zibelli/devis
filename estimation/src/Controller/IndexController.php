@@ -89,6 +89,10 @@ class IndexController extends AbstractController
                 'text/html'
             );
         $mailer->send($message);
+        $this->addFlash(
+            'success',
+            'Un E-mail vous a été envoyé à'
+        );
         return $this->redirectToRoute('total');
     }
 

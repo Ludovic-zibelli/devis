@@ -1,93 +1,14 @@
 {% extends "base.html.twig" %}
 {% block body %}
     {{ parent() }}
-    Votre demande à été envoyé.
-    A partir de {{ total }}€
+    {% for message in app.flashes('success') %}
+    <div class="flash-success">
+        {{ message }} {{ estimation.email }}
+    </div>
+    {% endfor %}
+    <p>Votre demande à bien été reçu.</p>
+    <p>Votre site web à partir de {{ total }}€</p>
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;">Prendre RDV avec un conseiller</a>
-    <ul>
-        <li>Votre demande concerne la {{ estimation.contexte }} d'un site web</li>
-        <li>Vous voulez un site web de type : {{ estimation.type }}</li>
-        {% if estimation.elementsGraphiques == 'aucun' %}
-            <li>Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique</li>
-        {% else %}
-            <li>Vous disposez d'un {{ estimation.elementsGraphiques}}</li>
-        {% endif %}
-        <li>Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</li>
-        {% if estimation.logo != false %}
-            <li>Vous souhaitez que nous créions votre logo</li>
-        {% endif %}
-        {% if estimation.charteGraphique != false %}
-            <li>Vous souhaitez que nous créions votre charte graphique</li>
-        {% endif %}
-        <li>Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
-        {% set l = estimation.langue|length %}
-        {% if l != 0 %}
-            {% for i in 1..l %}
-                {% set cycle = cycle(estimation.langue, i) %}
-                <li>Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}</li>
-            {% endfor %}
-        {% endif %}
-        {% if estimation.actualites != false %}
-            <li>Vous voulez avoir une page consacrée à l'actualités</li>
-        {% endif %}
-        {% if estimation.blog != false %}
-            <li>Vous voulez ajouter un blog au site web</li>
-        {% endif %}
-        {% if estimation.emailing != false %}
-            <li>Vous souhaitez une solution d'emailing</li>
-        {% endif %}
-        {% if estimation.formulaire == 0 %}
-            <li>Vous ne souhaitez pas de formulaire</li>
-        {% else %}
-            <li>Vous souhaitez {{ estimation.formulaire}} formulaire(s)</li>
-        {% endif %}
-        {% if estimation.espaceMembre != false %}
-            <li>Vous souhaitez un espace membre</li>
-        {% endif %}
-        {% if estimation.forum != false %}
-            <li>Vous souhaitez un forum</li>
-        {% endif %}
-        {% if estimation.gMaps  != false %}
-            <li>Vous souhaitez intégrer Google Maps</li>
-        {% endif %}
-        {% if estimation.image == 0 %}
-            <li>Vous ne souhaitez pas insérer d'image</li>
-        {% else %}
-            <li>Vous souhaitez insérer {{ estimation.image}} image(s)</li>
-        {% endif %}
-        {% if estimation.video == 0 %}
-            <li>Vous ne souhaitez pas insérer de vidéo</li>
-        {% else %}
-            <li>Vous souhaitez insérer {{ estimation.video}} vidéo(s)</li>
-        {% endif %}
-        {% set hv = estimation.hebergeurVideo|length %}
-        {% if hv != 0 %}
-            <li>vous hébergez vos videos chez</li>
-            {% for i in 1..hv %}
-                <li>{{ cycle(estimation.hebergeurVideo, i) }}</li>
-            {% endfor %}
-        {% endif %}
-        {% if estimation.domaine  != false %}
-            <li>Vous souhaitez nous confier l'achat du nom de domaine</li>
-        {% endif %}
-        {% if estimation.gestion != false %}
-            <li>Vous souhaitez nous confier la gestion</li>
-        {% endif %}
-        {% if estimation.suiviStats != false %}
-            <li>Vous souhaitez recevoir tout les mois un suivi des stats de votre site web</li>
-        {% endif %}
-        {% if estimation.assistance  != false %}
-            <li>Vous souhaitez une assistance technique</li>
-        {% endif %}
-        {% set md = estimation.marketingDigital|length %}
-        {% if md != 0 %}
-            <li>Vous voudriez
-            {% for i in 1..md %}
-                {% set cycle = cycle(estimation.marketingDigital, i) %}
-                <li>{{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}</li>
-            {% endfor %}
-        {% endif %}
-    </ul>
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;"><button class="btn-success btn">Prendre RDV avec un conseiller</button></a>
 {% endblock %}

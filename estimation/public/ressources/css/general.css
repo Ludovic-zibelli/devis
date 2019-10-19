@@ -159,3 +159,8 @@ div.asl_r .results {
         width : 100%;
     }
 }
+.flash-success {
+    text-align: center;
+    color: #7eea12;
+    font-size : 25px;
+}

@@ -1,6 +1,5 @@
 {% extends "base.html.twig" %}
 {% block body %}
-
     {% if not app.user %}
         <form action="{{ path('app_login') }}" method="post">
             <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
@@ -11,11 +10,11 @@
             <button class="btn btn-lg btn-primary" type="submit">Connexion</button>
         </form>
     {% endif %}
-
     {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connecté, <a href="{{ path('app_logout') }}">déconnexion</a>
-        </div>
+    {% for message in app.flashes('success') %}
+    <div class="flash-success">
+        {{ message }}
+    </div>
+    {% endfor %}
     {% endif %}
-
 {% endblock %}
