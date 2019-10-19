@@ -46,11 +46,10 @@ class IndexController extends AbstractController
     /**
      * @Route("/recapitulatif", name="recapitulatif")
      * @param Request $request
-     * @param Swift_Mailer $mailer
      * @return Response
      * @throws Exception
      */
-    public function recapitulatifAction(Request $request, Swift_Mailer $mailer)
+    public function recapitulatifAction(Request $request)
     {
         $session = new Session();
         $estimation = $session->get('estimation');
@@ -61,24 +60,36 @@ class IndexController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($estimation);
                 $entityManager->flush();
-                $total = $estimation->calcul();
-                $message = (new \Swift_Message('Estimation de votre projet.'))
-                    ->setFrom('contact@digitaluser.fr')
-                    ->setTo($estimation->getEmail())
-                    ->setBody(
-                        $this->renderView(
-                            'index/email-estimation.html.twig',
-                            ['estimation' => $estimation, 'total' => $total]
-                        ),
-                        'text/html'
-                    );
-                $mailer->send($message);
-                return $this->redirectToRoute('total');
+                return $this->redirectToRoute('envoi');
             }
             return $this->render('index/recapitulatif.html.twig', ['estimation' => $estimation]);
         }else
         $session->invalidate();
         return $this->redirectToRoute('estimation');
+    }
+
+        /**
+         * @Route("/mail", name="envoi")
+         * @param Swift_Mailer $mailer
+         * @return Response
+         */
+    public function envoiEmailAction(Swift_Mailer $mailer)
+    {
+        $session = new Session();
+        $estimation = $session->get('estimation');
+        $total = $estimation->calcul();
+        $message = (new \Swift_Message('Estimation de votre projet.'))
+            ->setFrom('contact@digitaluser.fr')
+            ->setTo($estimation->getEmail())
+            ->setBody(
+                $this->renderView(
+                    'index/email-estimation.html.twig',
+                    ['estimation' => $estimation, 'total' => $total]
+                ),
+                'text/html'
+            );
+        $mailer->send($message);
+        return $this->redirectToRoute('total');
     }
 
     /**

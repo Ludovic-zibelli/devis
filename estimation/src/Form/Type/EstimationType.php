@@ -29,7 +29,6 @@ class EstimationType extends AbstractType
                     'Une création de site' => 'creation',
                     'Une refonte de site' => 'refonte',
                 ],
-                'label' => 'Contexte du projet',
             ])
             ->add('type', ChoiceType::class, [
                 'choices'  => [
@@ -39,7 +38,6 @@ class EstimationType extends AbstractType
                 ],
                 'required' => true,
                 'help' => 'Un site vitrine est ..., un site e-commerce est ... et un Blog fait ...',
-                'label' => 'Type de site web désiré',
             ])
             ->add('elementsGraphiques', ChoiceType::class, [
                 'choices'  => [
@@ -48,27 +46,25 @@ class EstimationType extends AbstractType
                     'Maquettes ou Mock-up' => 'mock-up',
                 ],
                 'help' => 'Le zoning est ... et la maquette ...',
-                'label' => 'Éléments de graphisme fournis par le commanditaire',
             ])
             ->add('niveauGraphisme', ChoiceType::class, [
                 'choices'  => [
                     'A partir d\'un modèle' => 'normal',
                     'Sur-mesure' => 'sur-mesure',
                 ],
-                'label' => 'Niveau de graphisme souhaité',
             ])
             ->add('logo', ChoiceType::class, [
                 'choices' => [
-                    'Oui' => true,
                     'Non, j\'ai déjà un logo et je souhaite l\'utiliser' => false,
+                    'Oui' => true,
                 ],
                 'required' => true,
                 'multiple' => false,
             ])
             ->add('charteGraphique', ChoiceType::class, [
                 'choices' => [
-                    'Oui' => true,
                     'Non, j\'ai déjà une charte et je souhaite l\'utiliser' => false,
+                    'Oui' => true,
                 ],
                 'required' => true,
                 'multiple' => false,
@@ -79,7 +75,6 @@ class EstimationType extends AbstractType
                 'max' => 100
              ]
             ])
-
             ->add('langue', ChoiceType::class, [
                 'choices' => [
                     'Allemand' => 'de',
@@ -142,26 +137,23 @@ class EstimationType extends AbstractType
                     'Vimeo' => 'vimeo',
                     'Dailymotion' => 'dailymotion',
                 ],
-                'label'    => 'Hébergeur video',
                 'expanded'  => true,
                 'multiple'  => true,
                 'required' => false,
             ])
             ->add('domaine', ChoiceType::class, [
                 'choices' => [
-                    'Oui, je souhaite prendre un nom de domaine' => true,
                     'Non, j\'ai déjà un nom de domaine' => false,
+                    'Oui, je souhaite prendre un nom de domaine' => true,
                 ],
-
                 'required' => true,
                 'multiple' => false,
             ])
             ->add('gestion', ChoiceType::class, [
                 'choices' => [
-                    'Oui, je souhaite faire héberger mon site' => true,
                     'Non, j\'ai déja un prestataire pour l\'hébergement' => false,
+                    'Oui, je souhaite faire héberger mon site' => true,
                 ],
-
                 'required' => true,
                 'multiple' => false,
             ])
@@ -171,8 +163,8 @@ class EstimationType extends AbstractType
             ])
             ->add('assistance', ChoiceType::class, [
                 'choices' => [
-                    'Oui' => true,
                     'Non' => false,
+                    'Oui' => true,
                 ],
                 'required' => true,
                 'multiple' => false,
@@ -191,17 +183,17 @@ class EstimationType extends AbstractType
             ])
             ->add('maturiteProjet', ChoiceType::class, [
                 'choices'  => [
-                    'J\'ai déjà un ou plusieurs devis' => 'devis',
                     'Je n\'ai pas encore de devis' => 'pas',
+                    'J\'ai déjà un ou plusieurs devis' => 'devis',
                     'Je damande un devis par curiosité' => 'curiosite',
                 ],
             ])
             ->add('client', ChoiceType::class, [
                 'choices'  => [
                     'Particulier' => 'particulier',
+                    'Entreprise' => 'entreprise',
                     'Association' => 'association',
                     'Administration' => 'administration',
-                    'Entreprise' => 'entreprise',
                 ]])
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)

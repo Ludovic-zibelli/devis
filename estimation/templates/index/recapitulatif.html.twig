@@ -1,8 +1,6 @@
 {% extends "base.html.twig" %}
 {% block body %}
-
     {{ parent() }}
-
     <div class="container">
         <div class="row mt-5">
             <div class="col-12">
@@ -21,17 +19,16 @@
                 </ul>
                 <h5 class="card-title text-center">Graphisme</h5>
                 <ul>
-                    <li>{% if estimation.elementsGraphiques == 'aucun' %}
-                            - Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique
+                    {% if estimation.elementsGraphiques == 'aucun' %}
+                    <li>- Vous disposez d'{{ estimation.elementsGraphiques}} éléments graphique</li>
                         {% else %}
-                            - Vous disposez d'un {{ estimation.elementsGraphiques}}
+                    <li>- Vous disposez d'un {{ estimation.elementsGraphiques}}</li>
                         {% endif %}
-                    </li>
+
                     <li>- Vous souhaitez un niveau graphique {{ estimation.niveauGraphisme }}</li>
-                    <li>{% if estimation.logo != false %}
-                            - Vous souhaitez que nous créions votre logo
+                    {% if estimation.logo != false %}
+                    <li>- Vous souhaitez que nous créions votre logo</li>
                         {% endif %}
-                    </li>
                     <li>{% if estimation.charteGraphique != false %}
                             - Vous souhaitez que nous créions votre charte graphique
                         {% endif %}
@@ -41,89 +38,93 @@
                 <ul>
                     <li>- Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
                     {% set l = estimation.langue|length %}
-                    <li>{% if l != 0 %}
+                    {% if l != 0 %}
                             {% for i in 1..l %}
                                 {% set cycle = cycle(estimation.langue, i) %}
-                                - Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}
+                    <li>- Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}</li>
                             {% endfor %}
                         {% endif %}
-                    </li>
                 </ul>
                 <h5 class="card-title text-center">Fonctionnalités</h5>
                 <div class="row">
                     <div class="col-6">
                         <ul>
-                            <li>{% if estimation.actualites != false %}
-                                    - Vous voulez avoir une page consacrée à l'actualités
-                                {% endif %}</li>
-                            <li>{% if estimation.blog != false %}
-                                    - Vous voulez ajouter un blog au site web
-                                {% endif %}</li>
-                            <li>{% if estimation.emailing != false %}
-                                    - Vous souhaitez une solution d'emailing
-                                {% endif %}</li>
-                            <li>{% if estimation.formulaire == 0 %}
-                                    - Vous ne souhaitez pas de formulaire
+                            {% if estimation.actualites != false %}
+                            <li>- Vous voulez avoir une page consacrée à l'actualités</li>
+                                {% endif %}
+                            {% if estimation.blog != false %}
+                            <li>- Vous voulez ajouter un blog au site web</li>
+                                {% endif %}
+                            {% if estimation.emailing != false %}
+                            <li>- Vous souhaitez une solution d'emailing</li>
+                                {% endif %}
+                            {% if estimation.formulaire == 0 %}
+                            <li>- Vous ne souhaitez pas de formulaire</li>
                                 {% else %}
-                                    - Vous souhaitez {{ estimation.formulaire}} formulaire(s)
-                                {% endif %}</li>
-                            <li>{% if estimation.espaceMembre != false %}
-                                    - Vous souhaitez un espace membre
-                                {% endif %}</li>
-                            <li>{% if estimation.forum != false %}
-                                    - Vous souhaitez un forum
-                                {% endif %}</li>
-                            <li>{% if estimation.gMaps  != false %}
-                                    - Vous souhaitez intégrer Google Maps
-                                {% endif %}</li>
-                            <li>{% if estimation.image == 0 %}
-                                    - Vous ne souhaitez pas insérer d'image
+                                    <li>- Vous souhaitez {{ estimation.formulaire}} formulaire(s)</li>
+                                {% endif %}
+                            {% if estimation.espaceMembre != false %}
+                            <li>- Vous souhaitez un espace membre</li>
+                                {% endif %}
+                            {% if estimation.forum != false %}
+                            <li>- Vous souhaitez un forum</li>
+                                {% endif %}
+                           {% if estimation.gMaps  != false %}
+                            <li>- Vous souhaitez intégrer Google Maps</li>
+                                {% endif %}
+                            {% if estimation.image == 0 %}
+                            <li>- Vous ne souhaitez pas insérer d'image</li>
                                 {% else %}
-                                    - Vous souhaitez insérer {{ estimation.image}} image(s)
-                                {% endif %}</li>
-                            <li>{% if estimation.video == 0 %}
-                                    - Vous ne souhaitez pas insérer de vidéo
+                                    <li>- Vous souhaitez insérer {{ estimation.image}} image(s)</li>
+                                {% endif %}
+                            {% if estimation.video == 0 %}
+                            <li>- Vous ne souhaitez pas insérer de vidéo</li>
                                 {% else %}
-                                    - Vous souhaitez insérer {{ estimation.video}} vidéo(s)
-                                {% endif %}</li>
+                                    <li>- Vous souhaitez insérer {{ estimation.video}} vidéo(s)</li>
+                                {% endif %}
                         </ul>
                     </div>
                     <div class="col-6">
                         {% set hv = estimation.hebergeurVideo|length %}
-                        <li>{% if hv != 0 %}
-                                Vous hébergez vos videos chez
+                        {% if hv != 0 %}
+                            <li>Vous hébergez vos videos chez</li>
                                 {% for i in 1..hv %}
-                                    {{ cycle(estimation.hebergeurVideo, i) }}
+                        <li>{{ cycle(estimation.hebergeurVideo, i) }}</li>
                                 {% endfor %}
                             {% endif %}
-                        </li>
                     </div>
                 </div>
                 <h5 class="card-title text-center">Domaine & hébergement</h5>
                 <ul>
-                    <li>{% if estimation.domaine  != false %}
-                            - Vous souhaitez nous confier l'achat du nom de domaine
-                        {% endif %}</li>
-                    <li>{% if estimation.gestion != false %}
-                            - Vous souhaitez nous confier la gestion de l'hébergement
-                        {% endif %}</li>
+                    {% if estimation.domaine  != false %}
+                    <li>- Vous souhaitez nous confier l'achat du nom de domaine</li>
+                        {% else %}
+                    <li>- Vous avez déjà un nom de domaine</li>
+                        {% endif %}
+                    {% if estimation.gestion != false %}
+                    <li>- Vous souhaitez nous confier la gestion de l'hébergement</li>
+                        {% else %}
+                    <li>- Vous avez déja un prestataire pour l'hébergement</li>
+                        {% endif %}
                 </ul>
-                <h5 class="card-title text-center">Suivi & référencement</h5>
+                {% if estimation.suiviStats != false or estimation.assistance != false or estimation.marketingDigital|length !=0 %}
+                    <h5 class="card-title text-center">Suivi & référencement</h5>
+                {% endif %}
                 <ul>
-                    <li>{% if estimation.suiviStats != false %}
-                            - Vous souhaitez recevoir tout les mois un suivi des stats de votre site web
-                        {% endif %}</li>
-                    <li>{% if estimation.assistance  != false %}
-                            - Vous souhaitez une assistance technique
-                        {% endif %}</li>
+                    {% if estimation.suiviStats != false %}
+                    <li>- Vous souhaitez recevoir tout les mois un suivi des stats de votre site web</li>
+                        {% endif %}
+                    {% if estimation.assistance  != false %}
+                    <li>- Vous souhaitez une assistance technique</li>
+                        {% endif %}
                     {% set md = estimation.marketingDigital|length %}
-                    <li>{% if md != 0 %}
-                            - Vous souhaitez
+                    {% if md != 0 %}
+                    <li>- Vous souhaitez</li>
                             {% for i in 1..md %}
                                 {% set cycle = cycle(estimation.marketingDigital, i) %}
-                                {{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne', 'aucun' : 'aucun accompagnement'}) }}
+                    <li>{{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne', 'aucun' : 'aucun accompagnement'}) }}</li>
                             {% endfor %}
-                        {% endif %}</li>
+                        {% endif %}
                 </ul>
                 <h5 class="card-title text-center">Maturité de votre projet</h5>
                 <ul>
@@ -140,37 +141,31 @@
                         <div class="col-6">
                             <ul>
                                 <li>- Vous êtes {{ estimation.nom }} {{ estimation.prenom }}</li>
-                                <li>{% if estimation.client == 'particulier' %}
-                                        - Vous êtes un {{ estimation.client}}
+                                {% if estimation.client == 'particulier' %}
+                                <li>- Vous êtes un {{ estimation.client}}</li>
                                     {% else %}
-                                        - Vous êtes l'{{ estimation.client}} {{ estimation.raisonSocial }}
+                                        <li>- Vous êtes l'{{ estimation.client}} {{ estimation.raisonSocial }}</li>
                                     {% endif %}
-                                </li>
-                                <li>{% if estimation.optin != false %}
-                                        - Vous voulez etre inscrit à la newsletter
+                                {% if estimation.optin != false %}
+                                <li>- Vous voulez etre inscrit à la newsletter</li>
                                     {% endif %}
-                                </li>
                             </ul>
-
                         </div>
                         <div class="col-6">
                             <ul>
                                 <li>- Votre E-mail: {{ estimation.email }}</li>
-                                <li>{% if estimation.telephone  != false %}
-                                        - Votre numéro de téléphone : 0{{ estimation.telephone }}
+                                {% if estimation.telephone != false %}
+                                <li>- Votre numéro de téléphone : 0{{ estimation.telephone }}</li>
                                     {% endif %}
-                                </li>
                             </ul>
-
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4 ml-auto mr-auto ">
-                            <a class="btn btn-primary " href="{{ path('estimation') }}">Modifier le formulaire</a>
+                            <a class="btn btn-primary" href="{{ path('estimation') }}">Modifier le formulaire</a>
                         </div>
                     </div>
                 </div>
-
         </div>
         <form method="post">
             <div class="row ml-auto mr-auto">
@@ -187,17 +182,4 @@
 
         </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 {% endblock %}

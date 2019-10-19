@@ -113,7 +113,7 @@ final class Versions
   'symfony/web-link' => 'v4.3.4@4bd0ce7c54d604300deee8eb1b1beda856fbba20',
   'symfony/web-profiler-bundle' => 'v4.3.4@387c36fd133c08bb0d78d8de17c1121681b37a09',
   'symfony/yaml' => 'v4.3.4@5a0b7c32dc3ec56fd4abae8a4a71b0cf05013686',
-  'twig/twig' => 'v2.11.3@699ed2342557c88789a15402de5eb834dedd6792',
+  'twig/twig' => 'v2.12.1@ddd4134af9bfc6dba4eff7c8447444ecc45b9ee5',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
   'zendframework/zend-code' => '3.3.2@936fa7ad4d53897ea3e3eb41b5b760828246a20b',
   'zendframework/zend-eventmanager' => '3.2.1@a5e2583a211f73604691586b8406ff7296a946dd',

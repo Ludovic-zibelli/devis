@@ -3,7 +3,11 @@
     {{ parent() }}
     {% if app.user %}
         <div class="mb-3">
-            Vous êtes connecté, <a href="{{ path('app_logout') }}">déconnexion</a>
+            Vous êtes connecté <a href="{{ path('app_logout') }}"><button class="btn-warning btn">déconnexion</button></a>
         </div>
     {% endif %}
+    <a href="{{ url("crm_creation") }}"><button class="btn-dark btn">Créer une estimation</button></a><br>
+    {% for client in data|sort((a, b) => a.date <=> b.date)|reverse %}
+        {{ client.date|date("d/m/Y") }} {{ client.nom }} {{ client.prenom }} <a href="{{ url("crm_info", {slug: client.clientId}) }}"><button class="btn-info btn">Vers l'estimation</button></a><br>
+    {% endfor %}
 {% endblock %}
