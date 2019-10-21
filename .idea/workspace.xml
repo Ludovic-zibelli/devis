@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/estimation/public/ressources/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/estimation/public/ressources/js/notify.js" afterDir="false" />
+    <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="Mise en page de la page recapitulatif avec mise en page bootstrap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/public/ressources/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/public/ressources/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/CrmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/crm/info.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/info.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,12 +55,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Twig" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -182,6 +172,12 @@
       <path value="$PROJECT_DIR$/devis/vendor/symfony/apache-pack" />
     </include_path>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
   <component name="ProjectId" id="1QmDEFogrrp9yZ6kkope2I0hnuD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -190,7 +186,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/estimation/public/ressources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projet" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -204,9 +200,6 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\wamp64\www\devis\estimation\public\ressources\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\wamp64\www\devis\estimation\src\Entity" />
       <recent name="G:\wamp64\www\devis\estimation\templates\crm" />
@@ -269,12 +262,11 @@
       <workItem from="1570826869760" duration="14753000" />
       <workItem from="1570874750561" duration="1358000" />
       <workItem from="1570997839458" duration="1090000" />
-      <workItem from="1571045037371" duration="9016000" />
-      <workItem from="1571413152282" duration="51000" />
-      <workItem from="1571413213627" duration="12943000" />
-      <workItem from="1571426255634" duration="7747000" />
-      <workItem from="1571438808328" duration="2227000" />
-      <workItem from="1571487215759" duration="9947000" />
+      <workItem from="1571045037371" duration="15654000" />
+      <workItem from="1571381756781" duration="5673000" />
+      <workItem from="1571674456706" duration="4683000" />
+      <workItem from="1571687596097" duration="87000" />
+      <workItem from="1571687800403" duration="1843000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -311,7 +303,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571047875772</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mise en forme  2 du form sur la page estimation + debut de mise en forme de la page recapitulatif">
+      <created>1571220147174</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571220147174</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Mise en page de la page recapitulatif avec mise en page bootstrap">
+      <created>1571304564286</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571304564286</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -357,7 +363,9 @@
     <MESSAGE value="Demmarage du projet devis en ligne" />
     <MESSAGE value="Mise en place de la connection a la base de donees" />
     <MESSAGE value="Mise en forme du form sur la page estimation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en forme du form sur la page estimation" />
+    <MESSAGE value="Mise en forme  2 du form sur la page estimation + debut de mise en forme de la page recapitulatif" />
+    <MESSAGE value="Mise en page de la page recapitulatif avec mise en page bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page recapitulatif avec mise en page bootstrap" />
   </component>
   <component name="masterDetails">
     <states>
