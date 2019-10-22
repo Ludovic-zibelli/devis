@@ -1,8 +1,8 @@
 {% extends "base.html.twig" %}
 {% block body %}
     {% if not app.user %}
-        <div class="container mt-5">
-            <div class="row ">
+        <div class="container mt-5 ">
+            <div class="row mb-10">
                 <div class="col-4"></div>
                 <div class="col-4">
                     <div class="card">
@@ -15,7 +15,7 @@
                         <input type="email" name="_username" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
                         <label for="inputPassword" class="sr-only">Password</label>
                         <input type="password" name="_password" id="inputPassword" class="form-control" placeholder="Password" required>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+                        <button class="btn btn-lg btn-primary btn-block mt-1" type="submit">Connexion</button>
                     </form>
                     </div>
                     </div>
