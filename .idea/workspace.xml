@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/crm/info.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/info.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +259,7 @@
       <workItem from="1571381756781" duration="5673000" />
       <workItem from="1571674456706" duration="4683000" />
       <workItem from="1571687596097" duration="87000" />
-      <workItem from="1571687800403" duration="6079000" />
+      <workItem from="1571687800403" duration="11108000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -319,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571689970200</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Mise en page de la page CRM">
+      <created>1571777118298</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571777118298</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -368,7 +373,8 @@
     <MESSAGE value="Mise en forme  2 du form sur la page estimation + debut de mise en forme de la page recapitulatif" />
     <MESSAGE value="Mise en page de la page recapitulatif avec mise en page bootstrap" />
     <MESSAGE value="Mise en page de la page login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page login" />
+    <MESSAGE value="Mise en page de la page CRM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page CRM" />
   </component>
   <component name="masterDetails">
     <states>
