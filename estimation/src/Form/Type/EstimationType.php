@@ -157,9 +157,13 @@ class EstimationType extends AbstractType
                 'required' => true,
                 'multiple' => false,
             ])
-            ->add('suiviStats', CheckboxType::class, [
-                'label'    => 'Rapport mensuel de suivi des stats',
-                'required' => false,
+            ->add('suiviStats', ChoiceType::class, [
+                'choices' => [
+                    'Non' => false,
+                    'Oui' => true,
+                ],
+                'required' => true,
+                'multiple' => false,
             ])
             ->add('assistance', ChoiceType::class, [
                 'choices' => [
@@ -205,7 +209,7 @@ class EstimationType extends AbstractType
             ])
             ->add('telephone', TelType::class, ['required' => false])
             ->add('rgpd', CheckboxType::class)
-            ->add('save', SubmitType::class, ['label' => 'Valider'])
+            //->add('save', SubmitType::class, ['label' => 'Valider'])
         ;
     }
 

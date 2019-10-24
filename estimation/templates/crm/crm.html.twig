@@ -6,8 +6,41 @@
         {{ message }}
     </div>
     {% endfor %}
-    <a href="{{ url("crm_creation") }}"><button class="btn-dark btn">Créer une estimation</button></a><br>
-    {% for client in data|sort((a, b) => a.date <=> b.date)|reverse %}
-        {{ client.date|date("d/m/Y") }} {{ client.nom }} {{ client.prenom }} <a href="{{ url("crm_info", {slug: client.clientId}) }}"><button class="btn-info btn">Vers l'estimation</button></a><br>
-    {% endfor %}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <a href="{{ url("crm_creation") }}"><button class="btn-dark btn">Créer une estimation</button></a><br>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date de création de l'estimation</th>
+                            <th scope="col">Nom de l'entreprise</th>
+                            <th scope="col">Nom du client</th>
+                            <th scope="col">Prenom du client</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                {% for client in data|sort((a, b) => a.date <=> b.date)|reverse %}
+                    <tbody>
+                        <tr>
+                            <td>{{ client.date|date("d/m/Y") }}</td>
+                            <td>{{ client.raisonSocial }}</td>
+                            <td>{{ client.nom }}</td>
+                            <td>{{ client.prenom }}</td>
+                            <td><a href="{{ url("crm_info", {slug: client.clientId}) }}"><button class="btn-info btn">Vers l'estimation</button></a></td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

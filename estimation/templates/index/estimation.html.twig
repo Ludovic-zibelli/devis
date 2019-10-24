@@ -84,6 +84,9 @@
                         {{ form_widget(form.espaceMembre) }}
                         {{ form_widget(form.forum) }}
                         {{ form_widget(form.gMaps) }}
+                        <p>Nombre de formulaire que vous souhaitez ?{{ form_widget(form.formulaire) }}</p>
+                        <p>Nombre d'image que vous souhaitez ?{{ form_widget(form.image) }}</p>
+                        <p>Nombre de video que vous souhaitez ?{{ form_widget(form.video) }}</p>
                     </div>
                 </div>
                 <div class="col-6">
@@ -116,6 +119,8 @@
                     <div class="form-group">
                         <label>Souhaitez-vous une assistance technique mensuelle ?</label>
                         {{ form_widget(form.assistance) }}
+                        <label>Souhaitez-vous un rapport mensuel de suivi des stats ?</label>
+                        {{ form_widget(form.suiviStats) }}
                     </div>
                 </div>
                 <div class="col-6">
@@ -166,13 +171,15 @@
                         {{ form_widget(form.raisonSocial) }}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-group">
-                            {{ form_widget(form.save) }}
-                        </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Valider</button>
                     </div>
                 </div>
+                <div class="col-4"></div>
             </div>
         </div>
         {{ form_end(form) }}

@@ -2,6 +2,13 @@
 {% block body %}
     {% if not app.user %}
         <div class="container mt-5 ">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <a href="{{ url("estimation") }}">Retour a la page Estimation</a>
+                </div>
+                <div class="col-4"></div>
+            </div>
             <div class="row mb-10">
                 <div class="col-4"></div>
                 <div class="col-4">
