@@ -1,14 +1,31 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    {{ parent() }}
-    {% for message in app.flashes('success') %}
-    <div class="flash-success">
-        {{ message }} {{ estimation.email }}
-    </div>
-    {% endfor %}
-    <p>Votre demande à bien été reçu.</p>
-    <p>Votre site web à partir de {{ total }}€</p>
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;"><button class="btn-success btn">Prendre RDV avec un conseiller</button></a>
+    <script src="https://kit.fontawesome.com/23fe68540b.js" crossorigin="anonymous"></script>
+    {{ parent() }}
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h3>Votre demande à bien été reçu.</h3>
+                <p>Au vue des éléments que vous nous avez fourni nous estimont votre projet à partir de :</p>
+                <h3><i class="fas fa-coins"></i> {{ total }} €</h3>
+                <p>Vous voulez un devis plus détailler pour votre projet prenez rendez-vous avec nous</p>
+                <p><a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/jkenobi/rdv-telephonique?hide_event_type_details=1'});return false;"><button class="btn-success btn">Prendre rendez-vous avec un conseiller</button></a></p>
+                <p>Un conseiller prendra contact avec vous pour avoir le maximum d'informations est vous faire une offre commerciale adapter à votre projet.
+                </p>
+                <p>Dans tous les cas un E-mail un récapitulatif de votre estimation vous a etait envoyer à l'adresse {{ estimation.email }}. </p>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <a href="http://www.digitaluser.fr"><button class="btn-success btn">Retour a la page d'accueil</button></a>
+            </div>
+            <div class="col-3">
+                <a href="{{ url("estimation") }}"><button class="btn-success btn">Refaire une estimation</button></a>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
 {% endblock %}
