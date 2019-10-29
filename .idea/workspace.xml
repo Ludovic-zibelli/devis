@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Form/Type/EstimationType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/crm/crm.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/estimation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/recapitulatif.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +260,9 @@
       <workItem from="1571381756781" duration="5673000" />
       <workItem from="1571674456706" duration="4683000" />
       <workItem from="1571687596097" duration="87000" />
-      <workItem from="1571687800403" duration="17666000" />
+      <workItem from="1571687800403" duration="18492000" />
+      <workItem from="1572097406218" duration="1927000" />
+      <workItem from="1572255583444" duration="3641000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -336,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571863132654</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Mise en page de la page CRM&#10;   -Fin de la mise en forme de la page estimation&#10;   -Fin de la mise en page de la page recapitulatife&#10;   -Ajout du lien connexion a la page base&#10;   -Mise en forme de la page CRM avec la liste des clients">
+      <created>1571950070268</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571950070268</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -387,7 +392,8 @@
     <MESSAGE value="Mise en page de la page login" />
     <MESSAGE value="Mise en page de la page CRM" />
     <MESSAGE value="Mise en page de la page CRM &#10;   -Mise en forme des details&#10;   -Mise en forme des bouton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page CRM &#10;   -Mise en forme des details&#10;   -Mise en forme des bouton" />
+    <MESSAGE value="Mise en page de la page CRM&#10;   -Fin de la mise en forme de la page estimation&#10;   -Fin de la mise en page de la page recapitulatife&#10;   -Ajout du lien connexion a la page base&#10;   -Mise en forme de la page CRM avec la liste des clients" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page CRM&#10;   -Fin de la mise en forme de la page estimation&#10;   -Fin de la mise en page de la page recapitulatife&#10;   -Ajout du lien connexion a la page base&#10;   -Mise en forme de la page CRM avec la liste des clients" />
   </component>
   <component name="masterDetails">
     <states>
