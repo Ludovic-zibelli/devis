@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/estimation", name="estimation")
+     * @Route("/", name="estimation")
      * @param Request $request
      * @return Response
      */

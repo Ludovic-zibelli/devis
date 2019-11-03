@@ -3,8 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="caa1cc71-54da-47ab-b2e4-f20cbd16e2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimation/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/.env" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/templates/index/total.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/estimation/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +277,8 @@
       <workItem from="1571687596097" duration="87000" />
       <workItem from="1571687800403" duration="18492000" />
       <workItem from="1572097406218" duration="1927000" />
-      <workItem from="1572255583444" duration="3641000" />
+      <workItem from="1572255583444" duration="4372000" />
+      <workItem from="1572346989430" duration="7211000" />
     </task>
     <task id="LOCAL-00001" summary="Demmarage du projet devis en ligne">
       <created>1568146578958</created>
@@ -341,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571950070268</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Mise en forme de la page total">
+      <created>1572260839208</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572260839208</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -393,7 +416,8 @@
     <MESSAGE value="Mise en page de la page CRM" />
     <MESSAGE value="Mise en page de la page CRM &#10;   -Mise en forme des details&#10;   -Mise en forme des bouton" />
     <MESSAGE value="Mise en page de la page CRM&#10;   -Fin de la mise en forme de la page estimation&#10;   -Fin de la mise en page de la page recapitulatife&#10;   -Ajout du lien connexion a la page base&#10;   -Mise en forme de la page CRM avec la liste des clients" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en page de la page CRM&#10;   -Fin de la mise en forme de la page estimation&#10;   -Fin de la mise en page de la page recapitulatife&#10;   -Ajout du lien connexion a la page base&#10;   -Mise en forme de la page CRM avec la liste des clients" />
+    <MESSAGE value="Mise en forme de la page total" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en forme de la page total" />
   </component>
   <component name="masterDetails">
     <states>

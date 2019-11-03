@@ -41,6 +41,7 @@ class ComposerStaticInitb3cca598933db3266c77cf96baa538b6
         ),
         'S' => 
         array (
+            'Symfony\\Requirements\\' => 21,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -179,6 +180,10 @@ class ComposerStaticInitb3cca598933db3266c77cf96baa538b6
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Requirements\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/requirements-checker/src',
         ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
