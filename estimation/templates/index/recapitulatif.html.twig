@@ -9,7 +9,7 @@
         </div>
         <div class="card mt-5">
             <div class="card-header">
-                <p class="">Bonjour {{ estimation.prenom }} merci d'avoir choisi de faire une estimation pour votre projet sur notre site voici un recapitulatif de votre demande. </p>
+                <p>Bonjour {{ estimation.prenom }}, merci d'avoir choisi notre site pour faire l'estimation de votre projet. Voici un recapitulatif de votre demande. </p>
             </div>
             <div class="card-body">
                 <h5 class="card-title text-center">Contexte de votre projet</h5>
@@ -39,9 +39,11 @@
                     <li>- Vous avez demandé {{ estimation.nombrePage }} page(s) pour votre site web</li>
                     {% set l = estimation.langue|length %}
                     {% if l != 0 %}
+                        - Vous souhaitez les langues suivantes :
                             {% for i in 1..l %}
                                 {% set cycle = cycle(estimation.langue, i) %}
-                    <li>- Vous souhaitez les langues suivantes : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}</li>
+                                {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}
+                                {{ not loop.last ? ', ' }}
                             {% endfor %}
                         {% endif %}
                 </ul>
@@ -82,16 +84,15 @@
                                 {% else %}
                                     <li>- Vous souhaitez insérer {{ estimation.video}} vidéo(s)</li>
                                 {% endif %}
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        {% set hv = estimation.hebergeurVideo|length %}
-                        {% if hv != 0 %}
-                            <li>Vous hébergez vos videos chez</li>
+                            {% set hv = estimation.hebergeurVideo|length %}
+                            {% if hv != 0 %}
+                                - Vous hébergez vos videos chez:
                                 {% for i in 1..hv %}
-                        <li>{{ cycle(estimation.hebergeurVideo, i) }}</li>
+                                    {{ cycle(estimation.hebergeurVideo, i) }}
+                                    {{ not loop.last ? ', ' }}
                                 {% endfor %}
                             {% endif %}
+                        </ul>
                     </div>
                 </div>
                 <h5 class="card-title text-center">Domaine & hébergement</h5>
@@ -119,10 +120,11 @@
                         {% endif %}
                     {% set md = estimation.marketingDigital|length %}
                     {% if md != 0 %}
-                    <li>- Vous souhaitez</li>
+                    - Vous souhaitez:
                             {% for i in 1..md %}
                                 {% set cycle = cycle(estimation.marketingDigital, i) %}
-                    <li>{{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne', 'aucun' : 'aucun accompagnement'}) }}</li>
+                                {{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'du référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne', 'aucun' : 'aucun accompagnement'}) }}
+                                {{ not loop.last ? ', ' }}
                             {% endfor %}
                         {% endif %}
                 </ul>
@@ -171,15 +173,14 @@
         </div>
         <form method="post">
             <div class="row mt-5 mb-5">
-                <div class="col-4"></div>
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                    <label>En cliquant, j'accepte de donné mes M&M's </label>
+                <div class="col-3"></div>
+                <div class="col-md-5 ml-auto mr-auto text-center">
+                    <label>En cochant, j'accepte de confier mes données à Digital User</label>
                     <input type="checkbox" id="estimation_rgpd" name="estimation[rgpd]" required>
                     <button class="btn btn-primary btn-lg btn-block" type="submit" id="estimation_save" name="estimation[save]">Valider</button>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-3"></div>
             </div>
-
         </form>
     </div>
 {% endblock %}

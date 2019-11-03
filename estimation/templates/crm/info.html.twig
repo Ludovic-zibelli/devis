@@ -6,7 +6,6 @@
             {{ message }}
         </div>
     {% endfor %}
-
     <div class="container mt-5">
         <div class="row text-center">
             <div class="col-4"></div>
@@ -16,7 +15,6 @@
             <div class="col-4"></div>
         </div>
         <div class="row mt-3">
-
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -31,7 +29,7 @@
                                         <td>{{ estimation.date|date("d/m/Y") }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Nom société: </td>
+                                        <td>Nom de la société: </td>
                                         <td>{{ estimation.raisonSocial }}</td>
                                     </tr>
                                     <tr>
@@ -59,7 +57,7 @@
                                         <td>{{ estimation.email }}</td>
                                     </tr>
                                     <tr>
-                                        <td>N° Tél: </td>
+                                        <td>N° Téléphone: </td>
                                         <td>0{{ estimation.telephone }}</td>
                                     </tr>
                                 </table>
@@ -94,17 +92,17 @@
                             <div class="col-6">
                                 <h5>Contexte du projet</h5>
                                 <ul>
-                                    <li> -{{ estimation.contexte }} de site {{ estimation.type }}</li>
+                                    <li>- {{ estimation.contexte }} de site {{ estimation.type }}</li>
 
                                 </ul>
                                 <h5>Graphisme</h5>
                                 <ul>
-                                    <li> -Elements graphiques fourni : {{ estimation.elementsGraphiques}}</li>
-                                    <li> -Niveau graphique : {{ estimation.niveauGraphisme }}</li>
+                                    <li>- Elements graphiques fourni : {{ estimation.elementsGraphiques}}</li>
+                                    <li>- Niveau graphique : {{ estimation.niveauGraphisme }}</li>
                                     {% if estimation.logo != false %}
-                                        <li> -Création du logo</li>
+                                        <li>- Création du logo</li>
                                     {% endif %}
-                                    <li> -Charte graphique :
+                                    <li>- Charte graphique :
                                         {% if estimation.charteGraphique  != false %}
                                             oui
                                         {% else %}
@@ -113,59 +111,60 @@
                                 </ul>
                                 <h5>Contenues</h5>
                                 <ul>
-                                    <li> -Nombre de page : {{ estimation.nombrePage }}</li>
+                                    <li>- Nombre de page : {{ estimation.nombrePage }}</li>
                                     {% set l = estimation.langue|length %}
                                     {% if l != 0 %}
+                                        <li>- Langues du site :</li>
                                         {% for i in 1..l %}
                                             {% set cycle = cycle(estimation.langue, i) %}
-                                            <li> -Langues du site : {{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}</li>
+                                            <li>{{ cycle|replace({'fr': 'Français', 'de': 'Allemand', 'en': 'Anglais', 'ar': 'Arabe', 'es': 'Espagnol', 'it': 'Italien', 'zh': 'Mandarin', 'pt': 'Portugais'}) }}</li>
                                         {% endfor %}
                                     {% endif %}
                                 </ul>
                                 <h5>Fonctionnalités</h5>
                                 <ul>
-                                    <li> -Ajout d'une page actualites :
+                                    <li>- Ajout d'une page actualites :
                                         {% if estimation.actualites  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Ajout d'un blog :
+                                    <li>- Ajout d'un blog :
                                         {% if estimation.blog  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Ajout emailing :
+                                    <li>- Ajout emailing :
                                         {% if estimation.emailing  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Nombre de formulaire : {{ estimation.formulaire }}</li>
-                                    <li> -Ajout d'un espace membre :
+                                    <li>- Nombre de formulaire : {{ estimation.formulaire }}</li>
+                                    <li>- Ajout d'un espace membre :
                                         {% if estimation.espaceMembre  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Ajout d'un forum :
+                                    <li>- Ajout d'un forum :
                                         {% if estimation.forum  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Ajout de google maps :
+                                    <li>- Intégration de google maps :
                                         {% if estimation.gMaps  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Nombre d'image : {{ estimation.image }}</li>
-                                    <li> -Nombre de video : {{ estimation.video }}</li>
+                                    <li>- Nombre d'image : {{ estimation.image }}</li>
+                                    <li>- Nombre de video : {{ estimation.video }}</li>
                                     {% set hv = estimation.hebergeurVideo|length %}
                                     {% if hv != 0 %}
-                                        <li> -Il héberge ses videos chez</li>
+                                        <li>- Vidéo hébergé chez</li>
                                         {% for i in 1..hv %}
                                             <li>{{ cycle(estimation.hebergeurVideo, i) }}</li>
                                         {% endfor %}
@@ -175,13 +174,13 @@
                             <div class="col-6">
                                 <h5>Domaine & Hébergement</h5>
                                 <ul>
-                                    <li> -Création d'un nom de domaine :
+                                    <li>- Création d'un nom de domaine :
                                         {% if estimation.domaine  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Abonnement gestion :
+                                    <li>- Abonnement gestion :
                                         {% if estimation.gestion  != false %}
                                             oui
                                         {% else %}
@@ -190,13 +189,13 @@
                                 </ul>
                                 <h5>Suivi & Référencement</h5>
                                 <ul>
-                                    <li> -Abonnement suivi des stats :
+                                    <li>- Abonnement suivi des stats :
                                         {% if estimation.suiviStats  != false %}
                                             oui
                                         {% else %}
                                             non
                                         {% endif %}</li>
-                                    <li> -Abonnement assistance technique :
+                                    <li>- Abonnement assistance technique :
                                         {% if estimation.assistance  != false %}
                                             oui
                                         {% else %}
@@ -204,7 +203,7 @@
                                         {% endif %}</li>
                                     {% set md = estimation.marketingDigital|length %}
                                     {% if md != 0 %}
-                                        <li> -Marketing Digital:
+                                        <li>- Marketing Digital:
                                         {% for i in 1..md %}
                                             {% set cycle = cycle(estimation.marketingDigital, i) %}
                                             {{ cycle|replace({'res_soc': 'un accompagnement réseaux sociaux', 'ref_nat': 'un référencement naturel', 'redac': 'un accompagnement rédaction web', 'campagne': 'une campagnes de marketing en ligne'}) }}</li>
@@ -218,12 +217,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <p></p>
-
-
-
 {% endblock %}
